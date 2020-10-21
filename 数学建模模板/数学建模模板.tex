@@ -1,0 +1,136 @@
+%请使用pdflatex编译 
+%代码是我自己写的，但是方法啥的全是网上搜的，我也不知道我这种情况有没有版权QAQ，转载标明出处即可
+%联系作者：邮箱2978028549@qq.com，B站ID“我不是wc"
+%文档首发于B站
+%求打赏
+\documentclass{article}
+\usepackage{ctex}                                           %显示中文，更改字体
+\usepackage{setspace}                                       %调整页行距
+\usepackage{geometry}                                       %设置页边距
+\usepackage{booktabs}                                       %制作三线表
+\usepackage{graphicx}                                       %插入图片
+\usepackage[CJKbookmarks=true,pdfpagemode=UseOutlines,bookmarksnumbered,bookmarksopen]{hyperref}                    %生成书签
+\hypersetup{hidelinks,colorlinks=true,allcolors=black,pdfstartview=Fit,breaklinks=true}%配置书签格式
+\title{文章的标题}                                          %文章标题
+\author {作者名称}                                          %作者的名称
+\date{\today}                                               %日期
+\renewcommand{\baselinestretch}{1.2}                        %调整行距为1.2倍标准行距
+\renewcommand\refname{\ }                                   %吧"reference"改成"参考文献"
+\renewcommand{\abstractname}{摘要}                          %把“abstract”改成“摘要”
+%\setlength{\baselineskip}{20pt}                            %调整行距为20pt,(不好用，如果需要使用的话要放在需要修改的文字前面)
+%\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}   %设置页边距
+
+\begin{document}
+\setlength{\parindent}{0em}
+\maketitle                                                  %生成文章题目，作者，时间
+\thispagestyle{empty}                                       %本页不生成页码
+\begin{abstract}                                            %摘要 开始
+在这里写摘要\\ 摘要\\ 摘要
+\end{abstract}                                              %摘要 结束
+\newpage                                                    %换页
+\tableofcontents                                            %生成目录
+\thispagestyle{empty}                                       %本页不生成页码
+\newpage                                                    %换页
+\setcounter{page}{1}                                        %文章页码从1开始重新编排
+\section{问题重述}                                          %换页
+\newpage
+\section{问题分析}
+\newpage                                                    %换页
+\section{模型假设与约定}
+\newpage                                                    %换页
+\section{符号说明与名词定义}
+\newpage                                                    %换页
+\section{模型建立}
+\newpage                                                    %换页
+\section{模型求解}
+\newpage                                                    %换页
+\section{模型建议}
+\newpage                                                    %换页
+\section{模型评价}
+\newpage                                                    %换页
+\section{模型推广}
+\newpage
+\section{参考文献1}
+\cite{ref1}引用参考文献1                                     %换页
+\section{参考文献2}
+\renewcommand{\baselinestretch}{0.01}                       %调整行距为1.2倍标准行距
+\begin{thebibliography}{99}                                 %最大摘要上限为99个
+\bibitem{ref1}这是第一个参考文献
+\bibitem{ref2}这是第二个参考文献
+\bibitem{ref3}这是第三个参考文献
+\bibitem{ref4}这是第四个参考文献
+\end{thebibliography}
+\newpage                                                    %换页
+\section{附录}
+\section{首行如何空两格}
+%由于前面使用了代码\setlength{\parindent}{0em}，首行不再缩进，如：
+up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人\\
+************************************************************************\\
+%我们可以利用\indent\qquad\ 实现空两格，如:
+\indent\qquad\  up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up主是完美男人up 主是完美男人\\
+\newpage                                                    %换页
+\section{如何更改字体}
+%局部更改字体，例：
+{\songti    宋体}局部字体\\
+{\heiti     黑体}局部字体\\
+{\fangsong  仿宋}局部字体\\
+{\kaishu    楷书}局部字体\\
+************************************************************************\\
+%全局更改宋体，例：
+\songti    宋体  全局字体\\
+\heiti     黑体  全局字体\\
+\fangsong  仿宋  全局字体\\
+\kaishu    楷书  全局字体\\
+************************************************************************\\
+%字号同理
+\zihao{3}   三号字体\\
+\zihao{1}   一号字体\\
+{\zihao{3}  局部三号} 还是一号\\
+\newpage
+\section{制作三线表}
+\zihao{5}
+\begin{center}
+\begin{tabular}{ccc}
+    \toprule
+    B站搜索我不是wc&B站搜索我不是wc&B站搜索我不是wc\\
+    \midrule
+    B站搜索我不是wc&B站搜索我不是wc&B站搜索我不是wc\\
+    B站搜索我不是wc&B站搜索我不是wc&B站搜索我不是wc\\
+    B站搜索我不是wc&B站搜索我不是wc&B站搜索我不是wc\\
+    B站搜索我不是wc&B站搜索我不是wc&B站搜索我不是wc\\
+    B站搜索我不是wc&B站搜索我不是wc&B站搜索我不是wc\\
+    \bottomrule
+\end{tabular}
+\end{center}
+\newpage
+\section{插入图片}
+\begin{figure}[hbt]%先尝试能否将照片放在原处(here)，如果不能，那么放在页面底部(bottom),最后尝试放在顶部(top)
+  \centering
+  \includegraphics[scale=0.2]{1.jpg}%将照片1.jpg，缩放成原来的0.2倍
+  \caption{标题}
+\end{figure}  
+\newpage
+\section{并排插入两个图片}
+\begin{figure}[hbt]
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.2]{1.jpg}
+		\caption{标题1}
+	\end{minipage}
+	\qquad
+	\begin{minipage}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[scale=0.2]{1.jpg}
+		\caption{标题2}
+	\end{minipage}
+\end{figure}
+\newpage
+\section{书签乱码解决办法}
+\begin{figure}[hbt]%先尝试能否将照片放在原处(here)，如果不能，那么放在页面底部(bottom),最后尝试放在顶部(top)
+  \centering
+  \includegraphics[scale=0.5]{2.png}%将照片2.png，缩放成原来的0.2倍
+  \caption{标题}
+\end{figure} 
+该方法来自https://blog.csdn.net/he\_nan/article/details/106165716
+\newpage
+\end{document}
