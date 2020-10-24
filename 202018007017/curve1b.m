@@ -3,7 +3,7 @@ data = xlsread('.\第一次实验数据.xlsx');
 t = data(:,1);
 tem = data(:,2);
 ta = [197.5 202.5 233 238 268.5 273.5 339.5 344.5 410.5];
-ta = ta./7*6;
+ta = ta./7*6;+
 plot(t,tem);
 hold on;
 for i = 1:9
