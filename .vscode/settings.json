@@ -1,2 +1,14 @@
 {
+    "matlab.linterConfig": "",
+    "matlab.matlabpath": "D:\\Program Files\\Polyspace\\R2020a\\bin\\matlab.exe",
+    "matlab.mlintpath": "D:\\Program Files\\Polyspace\\R2020a\\bin\\win64\\mlint.exe",
+    "matlab.linterEncoding": "gb2312",
+    "files.associations": {"*.m":"matlab"},
+
+    "[matlab]": {
+        "files.encoding": "gb2312"
+    },
+    "code-runner.executorMap": {
+        "matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt"
+    },
 }
