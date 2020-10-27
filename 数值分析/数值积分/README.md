@@ -1,0 +1,5 @@
+数值积分实验第一次上机实验，matlab
+变量名跟随公式，可自行更改
+single_simpson和single_trapezium为辛普森和梯形公式，第一题
+simpson和trapezium为复化辛普森和复化梯形，第一题
+余下为第二题，I为两积分准确值
