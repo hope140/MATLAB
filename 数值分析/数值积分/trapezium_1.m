@@ -17,5 +17,5 @@ for k = 1:n-1
     end
 end
 
-T_2 = 1+fun(b);    %此题a=0，所以sinx/x=1，此处本应为fun(a)
+T_2 = fun(a)+fun(b);   
 T_n = h/2*(2*T_1+T_2)

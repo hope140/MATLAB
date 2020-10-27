@@ -18,5 +18,5 @@ for k = 1:n-1
     x = a+k*h;           %不存在x=0的情况
     S_2 = S_2+fun(x);
 end
-S_3 = 1+fun(b);
+S_3 = fun(a)+fun(b);
 S_n = h*(4*S_1+2*S_2+S_3)/6
