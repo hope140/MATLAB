@@ -1,6 +1,6 @@
 function [x,y] = Euler(fun,x0,y0,xn,h)
-% ÓÒ¶Ëº¯Êýfun£¬³õÖµx0,y0,¶Ëµãxn,²½³¤h
-n = (xn-x0)/h;    % Çø¼äµÄ¸öÊý
+% å³ç«¯å‡½æ•°funï¼Œåˆå€¼x0,y0,ç«¯ç‚¹xn,æ­¥é•¿h
+n = (xn-x0)/h;    % åŒºé—´çš„ä¸ªæ•°
 x = zeros(1,n+1);
 y = zeros(1,n+1);
 x(1) = x0;
