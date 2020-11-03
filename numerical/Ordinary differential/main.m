@@ -8,19 +8,19 @@ clc;clear
 % fun = @(x,y) -y+x+1;
 % fun_i = @(x) x+exp(-x);
 
-x0 = input('x0 = ');
-y0 = input('y0 = ');
-xn = input('xn = ');
-h = input('h = ');
-fun = input('fun = ');      
-fun_i = input('fun_i = ');  
+% x0 = input('x0 = ');
+% y0 = input('y0 = ');
+% xn = input('xn = ');
+% h = input('h = ');
+% fun = input('fun = ');      
+% fun_i = input('fun_i = ');  
 
-% x0 = 0;
-% y0 = 1;
-% xn = 1;
-% h = 0.1;
-% fun = @(x,y) x*exp(-x)-y;
-% fun_i = @(x) 1/2*(x^2+2)*exp(-x);
+x0 = 0;
+y0 = 1;
+xn = 1;
+h = 0.05;
+fun = @(x,y) x*exp(-x)-y;
+fun_i = @(x) 1/2*(x^2+2)*exp(-x);
 
 [x,y_I] = I(fun_i,x0,y0,xn,h);    % 精确值
 [y_E] = Euler(fun,x0,y0,xn,h);    % 欧拉法
@@ -28,6 +28,9 @@ fun_i = input('fun_i = ');
 [y_R] = Runge(fun,x0,y0,xn,h);    %龙格库塔法
 
 T = [x',y_I',y_E',y_P',y_R']
+% format long
+% T_2 = [x',y_I',y_R']
+% format short
 
 plot(x,y_I,'k', x,y_E,'b-.',x,y_P,'r:',x,y_R,'g--')
 title('各方法对比')
