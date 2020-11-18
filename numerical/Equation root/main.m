@@ -29,7 +29,7 @@ for ii = 1:10
 end
 
 [precision_I,x_kI] = Iteration(@(x)((x+1)/2)^(1/3),0,20);
-for ii = 1:10
+for ii = 1:20
     fprintf('方案二 (2)迭代20次 迭代法第%d次 方程的根x=%.5f;误差=%.5f\n',ii,x_kI(ii),precision_I(ii));
 end
 
