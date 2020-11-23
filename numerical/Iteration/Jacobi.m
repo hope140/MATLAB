@@ -10,6 +10,7 @@ function [x,n] = Jacobi(A,b,x0,eps)
     L = -tril(A,-1);    % 下三角阵
     U = -triu(A,1);     % 上三角阵
     B = D\(L+U);
+    R = max(abs(eig(B)));% 谱半径
     f = D\b;
     x = B*x0+f;
     n = 1;              % 迭代次数
@@ -17,4 +18,8 @@ function [x,n] = Jacobi(A,b,x0,eps)
         x0 = x;
         x = B*x0+f;
         n = n+1;
+    end
+    if R > 1
+        n = inf;
+        x = ('发散无结果')';
     end
