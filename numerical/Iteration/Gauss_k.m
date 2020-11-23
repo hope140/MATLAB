@@ -1,5 +1,6 @@
-function [x,n] = Gauss(A,b,x0,eps)
-    % Gauss迭代法，nargin在新版本中不支持
+function n = Gauss_k(A,b,x0,x_k)
+    % Gauss迭代法，已知解析解，求迭代次数
+    % nargin在新版本中不支持
     % if nargin == 3
     %     eps = 1.0e-6;
     % elseif nargin < 3
@@ -13,7 +14,7 @@ function [x,n] = Gauss(A,b,x0,eps)
     f = (D-L)\b;
     x = G*x0+f;
     n = 1;              % 迭代次数
-    while norm(x-x0) >=  eps
+    while x ~= x_k
         x0 = x;
         x = G*x0+f;
         n = n+1;
