@@ -1,44 +1,44 @@
 clc;clear
 format long
 
-% æ–¹æ¡ˆä¸€
+% ·½°¸Ò»
 [precision_I,x_kI] = Iteration(@(x)(x+1)^(1/3),1.5,8);
 for ii = 1:8
-    fprintf('æ–¹æ¡ˆä¸€ è¿­ä»£æ³•ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',ii,x_kI(ii),precision_I(ii));
+    fprintf('·½°¸Ò» µü´ú·¨µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',ii,x_kI(ii),precision_I(ii));
 end
 
 [k_NP,x_kNP] = Newton_pre(@(x)x*exp(x)-1,0.5,1.0e-5);
 for np = 1:max(k_NP)
-    fprintf('æ–¹æ¡ˆä¸€ ç‰›é¡¿æ³•ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;\n',k_NP(np),x_kNP(np));
+    fprintf('·½°¸Ò» Å£¶Ù·¨µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;\n',k_NP(np),x_kNP(np));
 end
 
-% æ–¹æ¡ˆäºŒ
+% ·½°¸¶þ
 [precision_I,x_kI] = Iteration(@(x)2*x^3-1,0,10);
 for ii = 1:10
-    fprintf('æ–¹æ¡ˆäºŒ (1)è¿­ä»£10æ¬¡ è¿­ä»£æ³•ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',ii,x_kI(ii),precision_I(ii));
+    fprintf('·½°¸¶þ (1)µü´ú10´Î µü´ú·¨µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',ii,x_kI(ii),precision_I(ii));
 end
 
 [precision_I,x_kI] = Iteration(@(x)2*x^3-1,0,20);
 for ii = 1:20
-    fprintf('æ–¹æ¡ˆäºŒ (1)è¿­ä»£20æ¬¡ è¿­ä»£æ³•ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',ii,x_kI(ii),precision_I(ii));
+    fprintf('·½°¸¶þ (1)µü´ú20´Î µü´ú·¨µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',ii,x_kI(ii),precision_I(ii));
 end
 
 [precision_I,x_kI] = Iteration(@(x)((x+1)/2)^(1/3),0,10);
 for ii = 1:10
-    fprintf('æ–¹æ¡ˆäºŒ (2)è¿­ä»£10æ¬¡ è¿­ä»£æ³•ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',ii,x_kI(ii),precision_I(ii));
+    fprintf('·½°¸¶þ (2)µü´ú10´Î µü´ú·¨µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',ii,x_kI(ii),precision_I(ii));
 end
 
 [precision_I,x_kI] = Iteration(@(x)((x+1)/2)^(1/3),0,20);
 for ii = 1:20
-    fprintf('æ–¹æ¡ˆäºŒ (2)è¿­ä»£20æ¬¡ è¿­ä»£æ³•ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',ii,x_kI(ii),precision_I(ii));
+    fprintf('·½°¸¶þ (2)µü´ú20´Î µü´ú·¨µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',ii,x_kI(ii),precision_I(ii));
 end
 
 [precision_N,x_kN] = Newton(@(x)x^3-x-1,1.5,10);
 for nn = 1:10
-    fprintf('æ–¹æ¡ˆäºŒ x0=1.5 ç‰›é¡¿æ³• ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',nn,x_kN(nn),precision_N(nn));
+    fprintf('·½°¸¶þ x0=1.5 Å£¶Ù·¨ µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',nn,x_kN(nn),precision_N(nn));
 end
 
 [precision_N,x_kN] = Newton(@(x)x^3-x-1,0,10);
 for nn = 1:10
-    fprintf('æ–¹æ¡ˆäºŒ x0=0 ç‰›é¡¿æ³• ç¬¬%dæ¬¡ æ–¹ç¨‹çš„æ ¹x=%.5f;è¯¯å·®=%.5f\n',nn,x_kN(nn),precision_N(nn));
+    fprintf('·½°¸¶þ x0=0 Å£¶Ù·¨ µÚ%d´Î ·½³ÌµÄ¸ùx=%.5f;Îó²î=%.5f\n',nn,x_kN(nn),precision_N(nn));
 end

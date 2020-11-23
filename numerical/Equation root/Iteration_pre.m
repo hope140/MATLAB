@@ -1,6 +1,6 @@
 function [k_all,x_kall] = Iteration_pre(fun,x0,precision)
-% è¿­ä»£æ³•ï¼Œå·²çŸ¥å‡½æ•°ï¼Œåˆå€¼ä»¥åŠç²¾åº¦
-k = 0;      % è¿­ä»£æ¬¡æ•°
+% µü´ú·¨£¬ÒÑÖªº¯Êý£¬³õÖµÒÔ¼°¾«¶È
+k = 0;      % µü´ú´ÎÊý
 x = x0;
 x_k = fun(x);
 while abs(x_k-x)>precision
@@ -10,7 +10,7 @@ while abs(x_k-x)>precision
     x = x_k;
     x_k = fun(x);
     if k>99
-        disp('æ²¡æœ‰æ‰¾åˆ°æ ¹');
+        disp('Ã»ÓÐÕÒµ½¸ù');
         return
     end    
 end
