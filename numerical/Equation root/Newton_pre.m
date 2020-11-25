@@ -1,5 +1,5 @@
 function [k_all,x_kall] = Newton_pre(fun,x0,precision)
-% Å£¶Ù·¨ ÒÑÖªº¯Êý£¬³õÖµ£¬¾«¶È
+% ç‰›é¡¿æ³• å·²çŸ¥å‡½æ•°ï¼Œåˆå€¼ï¼Œç²¾åº¦
 syms x
 y = fun(x);
 dif = matlabFunction(diff(y));
@@ -18,7 +18,7 @@ while abs(x_k-x)>precision
     df = dif(x);
     x_k = x-f/df;
     if k>999
-        disp('Ã»ÓÐÕÒµ½¸ù');
+        disp('æ²¡æœ‰æ‰¾åˆ°æ ¹');
         return
     end    
 end

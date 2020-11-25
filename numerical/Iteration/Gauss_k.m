@@ -1,20 +1,20 @@
 function n = Gauss_k(A,b,x0,x_k)
-    % Gaussµü´ú·¨£¬ÒÑÖª½âÎö½â£¬Çóµü´ú´ÎÊı
-    % narginÔÚĞÂ°æ±¾ÖĞ²»Ö§³Ö
+    % Gaussè¿­ä»£æ³•ï¼Œå·²çŸ¥è§£æè§£ï¼Œæ±‚è¿­ä»£æ¬¡æ•°
+    % narginåœ¨æ–°ç‰ˆæœ¬ä¸­ä¸æ”¯æŒ
     % if nargin == 3
     %     eps = 1.0e-6;
     % elseif nargin < 3
     %     error
     %     return
     % end
-    D = diag(diag(A));  % ¶Ô½Ç¾ØÕó
-    L = -tril(A,-1);    % ÏÂÈı½ÇÕó
-    U = -triu(A,1);     % ÉÏÈı½ÇÕó
+    D = diag(diag(A));  % å¯¹è§’çŸ©é˜µ
+    L = -tril(A,-1);    % ä¸‹ä¸‰è§’é˜µ
+    U = -triu(A,1);     % ä¸Šä¸‰è§’é˜µ
     G = (D-L)\U;
     f = (D-L)\b;
-    R = max(abs(eig(G)));% Æ×°ë¾¶
+    R = max(abs(eig(G)));% è°±åŠå¾„
     x = G*x0+f;
-    n = 1;              % µü´ú´ÎÊı
+    n = 1;              % è¿­ä»£æ¬¡æ•°
     while x ~= x_k
         x0 = x;
         x = G*x0+f;
@@ -22,5 +22,5 @@ function n = Gauss_k(A,b,x0,x_k)
     end
     if R > 1
         n = inf;
-        x = ('·¢É¢ÎŞ½á¹û')';
+        x = ('å‘æ•£æ— ç»“æœ')';
     end

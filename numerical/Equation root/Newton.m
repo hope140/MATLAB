@@ -1,19 +1,19 @@
 function[precision,x_k] = Newton(fun,x0,n)
-% Å£¶Ù·¨ ÒÑÖªº¯Êı£¬³õÖµ£¬µü´ú´ÎÊı
+% ç‰›é¡¿æ³• å·²çŸ¥å‡½æ•°ï¼Œåˆå€¼ï¼Œè¿­ä»£æ¬¡æ•°
 syms x
 y = fun(x);
 dif = matlabFunction(diff(y));
 
 x(1) = x0;
 for i = 1:n  
-    k(i) = i;   % µü´ú´ÎÊı
+    k(i) = i;   % è¿­ä»£æ¬¡æ•°
     f = fun(x(i));
     df = dif(x(i));    
     x_k(i) = x(i)-f/df;
     x(i+1) = x_k(i);
     precision(i) = abs(x_k(i)-x(i));
     while(precision(i)==0)
-        printf('µ±Ç°µü´ú´ÎÊık=%d;·½³Ì¸ùx=%.6f',k(i),x_k(i));
+        printf('å½“å‰è¿­ä»£æ¬¡æ•°k=%d;æ–¹ç¨‹æ ¹x=%.6f',k(i),x_k(i));
         return;
     end
 end
