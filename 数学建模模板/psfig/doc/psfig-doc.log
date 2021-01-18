@@ -1,0 +1,169 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  18 JAN 2021 12:21
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**psfig-doc
+(./psfig-doc.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06> (d:/texlive/2020/texmf-dist/tex/latex/base/latex209.def
+File: latex209.def 2018/08/11 v0.54 Standard LaTeX file
+
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen134
+\@maxsep=\dimen135
+\@dblmaxsep=\dimen136
+\@cla=\count163
+\@clb=\count164
+\mscount=\count165
+(d:/texlive/2020/texmf-dist/tex/latex/base/tracefnt.sty
+Package: tracefnt 2019/10/11 v3.0l Standard LaTeX package (font tracing)
+\tracingfonts=\count166
+LaTeX Info: Redefining \selectfont on input line 106.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 269.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 270.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 271.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 277.
+LaTeX Info: Redefining \em on input line 287.
+ (d:/texlive/2020/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 333.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 335.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 337.
+) (d:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(d:/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 54.
+ (d:/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 497.
+LaTeX Info: Redefining \mit on input line 498.
+\bibindent=\dimen137
+) (../psfig.sty
+\@unused=\write3
+\ps@stream=\read2
+\p@intvaluex=\dimen138
+\p@intvaluey=\dimen139
+
+psfig/tex 1.10-dvips
+) (d:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-03-12 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count175
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count176
+\g__pdf_backend_annotation_int=\count177
+)
+No file psfig-doc.aux.
+\openout1 = `psfig-doc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 4.
+(d:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 12.
+ (d:/texlive/2020/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 18.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 19.
+ (d:/texlive/2020/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmtt on input line 44.
+LaTeX Font Info:    No file OMSlmtt.fd. on input line 44.
+LaTeX Font Warning: Font shape `OMS/lmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 44.
+ [1
+
+] [2] [3] [4] [5] [6] [7] [8] (./psfig-doc.aux)
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+ ) 
+Here is how much of TeX's memory you used:
+ 919 strings out of 481358
+ 13807 string characters out of 5927881
+ 248250 words of memory out of 5000000
+ 18322 multiletter control sequences out of 15000+600000
+ 580306 words of font info for 87 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 25i,8n,24p,311b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on psfig-doc.pdf (8 pages).
