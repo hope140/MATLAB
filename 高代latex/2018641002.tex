@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{ctex}                               % 显示中文，更改字体
+\usepackage{indentfirst}                        % 首行缩进
+\usepackage{setspace}                           % 调整页行距
+\usepackage{geometry}                           % 设置页边距
+\usepackage{makecell}                           % 处理表格
+\usepackage{amsmath}                            % 公式处理
+\usepackage{amssymb}                            % 公式处理
+\usepackage{enumerate}                          % 编号排版
+\usepackage{algorithmic}
+
+
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+%设置页边距，此处参考word默认间距
+
+\begin{document}
+\setcounter{page}{87}                           % 文章页码从87开始重新编排
+{\heiti 证明.}我们直接对矩阵做初等变换：
+%   \begin{pmatrix}
+%       A + B    & 0 \\
+%       A^2 + AB & 0
+%   \end{pmatrix}
+\begin{equation*}                               % 带*的公式环境没有编号
+    \begin{split}                               % 公式环境内的对齐方式(split)
+        &\left(                                 % 在需要对齐的元素前&，换行使用\\实现
+        \begin{array}{cc}                       % 尝试matrix，此为latex宏包实现
+            A + B & 0 \\                        % Markdown环境下无法使用
+            0     & 0                           % 建议多使用array加括号实现
+        \end{array}
+        \right)
+        \longrightarrow                         % long+right+arrow 长+右+箭头(大写l即双箭头)
+        \left(
+        \begin{array}{cc}
+            A + B    & 0 \\
+            A^2 + AB & 0
+        \end{array}
+        \right)
+        =
+        \left(
+        \begin{array}{cc}
+            A + B & 0 \\
+            A^2   & 0
+        \end{array}
+        \right) \\
+        \longrightarrow
+        &\left(
+        \begin{array}{cc}
+            A + B & A^2 + BA \\
+            A^2   & A^3
+        \end{array}
+        \right)
+        =
+        \left(
+            \begin{array}{cc}
+                A + B & A^2 \\
+                A^2 & A^3
+            \end{array}
+        \right)
+        \longrightarrow
+        \left(
+            \begin{array}{cc}
+                B & A^2 \\
+                0 & A^3
+            \end{array}
+        \right)
+    \end{split}
+\end{equation*}
+
+
+
+
+
+
+
+\end{document}

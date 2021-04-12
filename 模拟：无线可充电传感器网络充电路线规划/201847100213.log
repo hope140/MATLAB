@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  3 NOV 2020 19:42
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  12 APR 2021 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -770,57 +770,57 @@ File: 6.jpg Graphic file (type bmp)
 File: 7.1.jpg Graphic file (type bmp)
 <7.1.jpg>
 
-Overfull \hbox (21.40974pt too wide) in paragraph at lines 322--323
+Overfull \hbox (21.40974pt too wide) in paragraph at lines 321--322
  [][] 
  []
 
 File: 7.2.jpg Graphic file (type bmp)
 <7.2.jpg>
 
-Overfull \hbox (21.40974pt too wide) in paragraph at lines 328--329
+Overfull \hbox (21.40974pt too wide) in paragraph at lines 327--328
  [][] 
  []
 
 
-Overfull \hbox (23.41847pt too wide) in paragraph at lines 320--331
+Overfull \hbox (23.41847pt too wide) in paragraph at lines 319--330
 [][]  [] 
  []
 
 File: 7.3.jpg Graphic file (type bmp)
 <7.3.jpg>
 
-Overfull \hbox (31.0074pt too wide) in paragraph at lines 349--350
+Overfull \hbox (31.0074pt too wide) in paragraph at lines 348--349
  [][] 
  []
 
 File: 7.4.jpg Graphic file (type bmp)
 <7.4.jpg>
 
-Overfull \hbox (24.45618pt too wide) in paragraph at lines 355--356
+Overfull \hbox (24.45618pt too wide) in paragraph at lines 354--355
  [][] 
  []
 
 
-Overfull \hbox (23.41847pt too wide) in paragraph at lines 347--358
+Overfull \hbox (23.41847pt too wide) in paragraph at lines 346--357
 [][]  [] 
  []
 
 File: 7.5.jpg Graphic file (type bmp)
 <7.5.jpg>
 
-Overfull \hbox (23.74966pt too wide) in paragraph at lines 367--368
+Overfull \hbox (23.74966pt too wide) in paragraph at lines 366--367
  [][] 
  []
 
 File: 7.6.jpg Graphic file (type bmp)
 <7.6.jpg>
 
-Overfull \hbox (20.4658pt too wide) in paragraph at lines 373--374
+Overfull \hbox (20.4658pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
 
-Overfull \hbox (23.41847pt too wide) in paragraph at lines 365--376
+Overfull \hbox (23.41847pt too wide) in paragraph at lines 364--375
 [][]  [] 
  []
 
@@ -828,19 +828,19 @@ Overfull \hbox (23.41847pt too wide) in paragraph at lines 365--376
 File: 7.7.jpg Graphic file (type bmp)
 <7.7.jpg>
 
-Overfull \hbox (31.0074pt too wide) in paragraph at lines 384--385
+Overfull \hbox (31.0074pt too wide) in paragraph at lines 383--384
  [][] 
  []
 
 File: 7.8.jpg Graphic file (type bmp)
 <7.8.jpg>
 
-Overfull \hbox (31.0074pt too wide) in paragraph at lines 390--391
+Overfull \hbox (31.0074pt too wide) in paragraph at lines 389--390
  [][] 
  []
 
 
-Overfull \hbox (23.41847pt too wide) in paragraph at lines 382--393
+Overfull \hbox (23.41847pt too wide) in paragraph at lines 381--392
 [][]  [] 
  []
 
@@ -848,12 +848,12 @@ Overfull \hbox (23.41847pt too wide) in paragraph at lines 382--393
 File: 8.jpg Graphic file (type bmp)
 <8.jpg>
 
-Overfull \hbox (26.65495pt too wide) in paragraph at lines 442--455
+Overfull \hbox (26.65495pt too wide) in paragraph at lines 441--454
  [] 
  []
 
 [15]
-Overfull \hbox (26.65495pt too wide) in paragraph at lines 496--509
+Overfull \hbox (26.65495pt too wide) in paragraph at lines 495--508
  [] 
  []
 
