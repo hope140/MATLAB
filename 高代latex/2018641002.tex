@@ -184,7 +184,7 @@
 即$r \left(A\right) + r \left(B\right) \ge r \left(AB\right) + r \left(A + B\right)$.
 
 \vspace{1ex}
-\noindent{{\heiti 4.7.3 打洞原理证明秩不等式}}
+\noindent{{\heiti 4.7.3 \quad 打洞原理证明秩不等式}}
 
 \vspace{1ex}
 {\heiti 命题4.5.}{\kaishu 已知$A$,$D$分别为$n$级与$m$级矩阵,且$A$可逆,$B$,$C$分别是$n\times m$与$m\times n$矩阵,利用打洞原理有}
@@ -264,7 +264,7 @@
         \end{array}
     \right)$,即$s + r \left(E_n - A'A\right) = n + r \left(E_s - AA'\right)$,即
 \begin{equation*}
-    r \left(E_n - A'A\right) = n + r \left(E_s - AA'\right) = n - s
+    r \left(E_n - A'A\right) = n + r \left(E_s - AA'\right) = n - s.
 \end{equation*}
 
 {\heiti 例题4.27.}{\kaishu 已知$A$是$n$级可逆矩阵,$\alpha$ ,$\beta$ 是任意两个$n$维列向量,则$r \left(A + \alpha \beta '\right) \ge n - 1$.}
@@ -352,7 +352,7 @@
         \end{array}\right)}
     \underline{\left(\begin{array}{ll}
             E_{r} & O
-        \end{array}\right) Q}
+        \end{array}\right) Q.}
 \end{equation*}
 现在记$P_1 = P \left(
     \begin{array}{c}
@@ -462,7 +462,7 @@
     \end{array}\right)=\left(\begin{array}{cc}
         E_{r} & O \\
         O     & O
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 从而得到$H = E_r$,而$B$,$C$,$D$可以任意取,所以$Q X P = \left(
     \begin{array}{cc}
@@ -532,7 +532,7 @@
         \lambda_{1}+\lambda_{2}+\cdots+\lambda_{n}=0             \\
         \lambda_{1}^{2}+\lambda_{2}^{2}+\cdots+\lambda_{n}^{2}=0 \\
         \vdots                                                   \\
-        \lambda_{1}^{n}+\lambda_{2}^{n}+\cdots+\lambda_{n}^{n}=0
+        \lambda_{1}^{n}+\lambda_{2}^{n}+\cdots+\lambda_{n}^{n}=0.
     \end{array}\right.
 \end{equation*}
 由 32 页的例题 $2.29$ 得 $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}=0$, 这说明 $A$ 是幂零矩阵.
@@ -595,11 +595,11 @@ $A=E_{i j}, B=E_{j i}$, 就有
 \vspace{1ex}
 {\heiti 证明.} 套路:
 \begin{equation*}
-    A^{k}=A^{k-1} A=A^{k-1}(A B-B A)=A^{k} B-A^{k-1} B A
+    A^{k}=A^{k-1} A=A^{k-1}(A B-B A)=A^{k} B-A^{k-1} B A.
 \end{equation*}
 于是
 \begin{equation*}
-    \operatorname{tr}\left(A^{k}\right)=\operatorname{tr}\left(A^{k} B\right)-\operatorname{tr}\left(\underline{A^{k-1} B} A\right)=\operatorname{tr}\left(A^{k} B\right)-\operatorname{tr}\left(A A^{k-1} B\right)=0
+    \operatorname{tr}\left(A^{k}\right)=\operatorname{tr}\left(A^{k} B\right)-\operatorname{tr}\left(\underline{A^{k-1} B} A\right)=\operatorname{tr}\left(A^{k} B\right)-\operatorname{tr}\left(A A^{k-1} B\right)=0.
 \end{equation*}
 同时, 据命题 4.7 可得 $A$ 是幂零矩阵.
 
@@ -608,7 +608,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
 \vspace{1ex}
 {\heiti 证明.} 首先, 注意套路: 如果 $A C=C A$, 则对任意的多项式 $f(x), g(x)$ 都有 $f(A) g(C)=g(C) f(A)$, 特别地, $A C^{k-1}=C^{k-1} A(k \geq 2)$, 于是
 \begin{equation*}
-    \operatorname{tr}\left(C^{k}\right)=\operatorname{tr}\left(C^{k-1} C\right)=\operatorname{tr}\left(C^{k-1}(A B-B A)\right)=\operatorname{tr}\left(\underline{C^{k-1} A B}\right)-\operatorname{tr}\left(C^{k-1} B A\right)=\operatorname{tr}\left(\underline{A C^{k-1}} B\right)-\operatorname{tr}\left(A C^{k-1} B\right)=0
+    \operatorname{tr}\left(C^{k}\right)=\operatorname{tr}\left(C^{k-1} C\right)=\operatorname{tr}\left(C^{k-1}(A B-B A)\right)=\operatorname{tr}\left(\underline{C^{k-1} A B}\right)-\operatorname{tr}\left(C^{k-1} B A\right)=\operatorname{tr}\left(\underline{A C^{k-1}} B\right)-\operatorname{tr}\left(A C^{k-1} B\right)=0.
 \end{equation*}
 据命题 4.7 可得 $C$ 是幂零矩阵.
 
@@ -635,7 +635,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right)=\left(\begin{array}{cc}
         A     & B     \\
         C+P A & D+P B
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 这里就要求 $P A$ 与 $P B$ 有意义, 同时万万不能写成 $A P$ 或者 $B P .$ 这就体现了行变换对应左乘(第 1 行左乘 $P$ 倍加到第 2 行 $),$ 也说明 $\left(\begin{array}{cc}A & B \\ C & D\end{array}\right)$ 与 $\left(\begin{array}{cc}A & B \\ C+P A & D+P B\end{array}\right)$ 是等价的.
 
@@ -651,7 +651,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right) \longrightarrow\left(\begin{array}{cc}
         A & B+A Q \\
         C & D+C Q
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 我们考虑一些特殊的问题, 称之为打洞原理, 这是玩转矩阵{\heiti 最重要}的手段!
 1. 当 $A$ 可逆时, 可以通过行变换干掉 $C$ 如下
@@ -662,7 +662,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right) \longrightarrow\left(\begin{array}{cc}
         A & B            \\
         O & D-C A^{-1} B
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 写成矩阵等式就是
 \begin{equation*}
@@ -675,7 +675,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right)=\left(\begin{array}{cc}
         A & B            \\
         O & D-C A^{-1} B
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 同时, 可以继续对 $\left(\begin{array}{cc}A & B \\ O & D-C A^{-1} B\end{array}\right)$ 做列变换用 $A$ 干掉 $B$, 即
 \begin{equation*}
@@ -688,7 +688,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right)=\left(\begin{array}{cc}
         A & O            \\
         O & D-C A^{-1} B
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 
 同理, 当 $D$ 可逆时, 就可以通过 $D$ 干掉 $B, C$, 至于先干掉哪个就看读者的心情了. 扬哥写一个, 读者写出
@@ -703,7 +703,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right) \longrightarrow\left(\begin{array}{cc}
         A-B D^{-1} C & O \\
         O            & D
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 当然, 以上也说明 $\left|\begin{array}{ll}A & B \\ C & D\end{array}\right|=|A|\left|D-C A^{-1} B\right|=|D|\left|A-B D^{-1} C\right| .$
 
@@ -718,7 +718,7 @@ $A=E_{i j}, B=E_{j i}$, 就有
     \end{array}\right) \longrightarrow\left(\begin{array}{cc}
         A & O                     \\
         O & D-B^{\prime} A^{-1} B
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 写出矩阵等式就是
 $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\begin{array}{cc}A & B \\ B^{\prime} & D\end{array}\right)\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)=\left(\begin{array}{cc}A & O \\ O & D-B^{\prime} A^{-1} B\end{array}\right) \cdot($ 请重视 $)$
@@ -730,7 +730,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right) \longrightarrow\left(\begin{array}{cc}
         A_{1} & \alpha                                   \\
         0     & a_{n n}-\beta^{\prime} A_{1}^{-1} \alpha
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 写成矩阵等式就是
 \begin{equation*}
@@ -743,7 +743,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right)=\left(\begin{array}{cc}
         A_{1} & \alpha                                   \\
         0     & a_{n n}-\beta^{\prime} A_{1}^{-1} \alpha
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 
 以上这种将分块乘法与初等交换结合是矩阵运算中{\heiti 极端重要}的手段，同时，这种手段还往往与数学归纳法紧密结合在一起,我们这里先举几个例子，请读者{\heiti 务必反复书写}，做到{\heiti 熟练}.
@@ -764,7 +764,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right)=\left(\begin{array}{cc}
         A_{1} & \alpha                               \\
         0     & a_{n n}-\beta^{\prime} A^{-1} \alpha
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 再结合 $B_{1} A_{1}$ 为上三角, 那么
 \begin{equation*}
@@ -777,7 +777,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right)=\left(\begin{array}{cc}
         B_{1} A_{1} & B_{1} \alpha                         \\
         0           & a_{n n}-\beta^{\prime} A^{-1} \alpha
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 是一个上三角矩阵, 两次运算结合起来, 记 $B=\left(\begin{array}{cc}B_{1} & 0 \\ 0 & 1\end{array}\right)\left(\begin{array}{cc}E_{n-1} & 0 \\ -\beta^{\prime} A_{1}^{-1} & 1\end{array}\right)$, 则显然 $B$ 是一个下三角矩阵,使得 $B A$ 为上三角矩阵.
 
@@ -788,7 +788,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     A=\left(\begin{array}{cc}
         A_{n-1}        & \alpha  \\
         \beta^{\prime} & a_{n n}
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 利用 $A_{n-1}$ 可逆, 千掉 $\alpha, \beta^{\prime}$ 就是
 \begin{equation*}
@@ -801,7 +801,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right)=\left(\begin{array}{cc}
         A_{n-1} & 0                                          \\
         0       & a_{n n}-\beta^{\prime} A_{n-1}^{-1} \alpha
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 两边取逆后化简, 马上可得
 \begin{equation*}
@@ -814,14 +814,14 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
         \end{array}\right)\left(\begin{array}{cc}
             E_{n-1}                      & 0 \\
             -\beta^{\prime} A_{n-1}^{-1} & 1
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 注意 $|A|>0$ 可得 $a_{n n}-\beta^{\prime} A_{n-1}^{-1} \alpha>0$, 同时, 我们还知道 $\alpha, \beta$ 的元素都为负数, $A_{n-1}^{-1}$ 的元素都为正数, 于是 个矩阵 $\left(\begin{array}{cc}E_{n-1} & -A_{n-1}^{-1} \alpha \\ 0 & 1\end{array}\right)$ 与 $\left(\begin{array}{cc}A_{n-1}^{-1} & 0 \\ 0 & \left(a_{n n}-\beta^{\prime} A_{n-1}^{-1} \alpha\right)^{-1}\end{array}\right)$ 及 $\left(\begin{array}{cc}E_{n-1} & 0 \\ -\beta^{\prime} A_{n-1}^{-1} & 1\end{array}\right)$ 的所有元素都是正数, 从而 $A^{-1}$ 的所有元素也都是正数.
 
 \vspace{1ex}
 {\heiti 例题 4.41 . } {\kaishu 设 $A$ 为 $n$ 级实对称矩阵, 且 $A$ 的所有顺序主子式 $D_{1}, D_{2}, \cdots, D_{n}$ 都非零, 则 $A$ 合同于对角矩阵}
 \begin{equation*}
-    \operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n}}{D_{n-1}}\right\}
+    \operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n}}{D_{n-1}}\right\}.
 \end{equation*}
 
 {\heiti 证明.} 对级数 $n$ 做数学归纳法. $n=1$ 是显然的. 假设命题对 $n-1$ 级矩阵成立, 则当 $A$ 是 $n$ 级矩阵时,
@@ -830,12 +830,12 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     A=\left(\begin{array}{cc}
         A_{1}           & \alpha  \\
         \alpha^{\prime} & a_{n n}
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 我们知道 $A_{1}$ 的顺序主子式为 $D_{1}, D_{2}, \cdots, D_{n-1}$, 结合 $A_{1}$ 是实对称矩阵, 利用假设, 我们知道存在 $n-1$ 级可
 逆矩阵 $P_{1}$ 使得
 \begin{equation*}
-    P_{1}^{\prime} A_{1} P_{1}=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n-1}}{D_{n-2}}\right\}
+    P_{1}^{\prime} A_{1} P_{1}=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n-1}}{D_{n-2}}\right\}.
 \end{equation*}
 
 现在我用利用合同变换干掉 $A$ 中的 $\alpha$ 与 $\alpha^{\prime}:$ 自然是选取 $Q=\left(\begin{array}{cc}E_{n-1} & -A_{1}^{-1} \alpha \\ 0 & 1\end{array}\right)$, 就有
@@ -843,7 +843,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     Q^{\prime} A Q=\left(\begin{array}{cc}
             A_{1} & 0                                         \\
             0     & a_{n n}-\alpha^{\prime} A_{1}^{-1} \alpha
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 注意到这里 $|Q|=1$, 所以上式两边取行列式可得 $|A|=\left|A_{1}\right|\left(a_{n n}-\alpha^{\prime} A_{1}^{-1} \alpha\right)$, 即 $a_{n n}-\alpha^{\prime} A_{1}^{-1} \alpha=\frac{D_{n}}{D_{n-1}} .$ 再取$P=\left(\begin{array}{cl}
             P_{1} & 0 \\
@@ -854,7 +854,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
          & P^{\prime} Q^{\prime} A Q P=\left(\begin{array}{cc}
                 P_{1}^{\prime} A_{1} P_{1} & 0                                         \\
                 0                          & a_{n n}-\alpha^{\prime} A_{1}^{-1} \alpha
-            \end{array}\right)=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n-1}}{D_{n-2}}, \frac{D_{n}}{D_{n-1}}\right\}
+            \end{array}\right)=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n-1}}{D_{n-2}}, \frac{D_{n}}{D_{n-1}}\right\}.
     \end{aligned}
 \end{equation*}
 记 $T=Q P$ 可知 $T^{\prime} A T=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n}}{D_{n-1}}\right\}$.
@@ -870,7 +870,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     A=\left(\begin{array}{cc}
         A_{1}           & \alpha  \\
         \alpha^{\prime} & a_{n n}
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 则 $A_{1}$ 的所有顺序主子式大于零, 利用假设知道 $A_{1}$ 正定, 于是存在 $n-1$ 级可逆矩阵 $P_{1}$ 使得 $P_{1}^{\prime} A P_{1}$ 为主对 角元都为正的对角矩阵. 同时, 利用 $A_{1}$ 可逆, $A$ 可以通过合同变换可以千掉 $\alpha$ 与 $\alpha^{\prime}$, 即
 \begin{equation*}
@@ -886,7 +886,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
         \end{array}\right)=\left(\begin{array}{cc}
             A_{1} & 0                                         \\
             0     & a_{n n}-\alpha^{\prime} A_{1}^{-1} \alpha
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 再取 $Q=\left(\begin{array}{cc}P_{1} & 0 \\ 0 & 1\end{array}\right)$ 就有
 \begin{equation*}
@@ -896,7 +896,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
         \end{array}\right) Q=\left(\begin{array}{cc}
             P^{\prime} A_{1} P & 0                                         \\
             0                  & a_{n n}-\alpha^{\prime} A_{1}^{-1} \alpha
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 为主对角元都为正的对角矩阵.
 
@@ -914,14 +914,14 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     A=\left(\begin{array}{cc}
         A_{n-1}         & \alpha  \\
         \alpha^{\prime} & a_{n n}
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 显然 $A_{n-1}$ 的顺序主子式都是 $A$ 的顺序主子式, 从而都非零, 于是存在 $n-1$ 级特殊上三角矩阵 $T_{1}$ 使得 $T_{1}^{\prime} A_{n-1} T_{1}$ 为对角矩阵. 下面对 $A$ 进行合同变换干掉 $\alpha$ 与 $\alpha^{\prime}$, 即取 $P=\left(\begin{array}{cc}E_{n-1} & -A_{n-1}^{-1} \alpha \\ 0 & 1\end{array}\right)$ 就有
 \begin{equation*}
     P^{\prime} A P=\left(\begin{array}{cc}
             A_{n-1} & 0                                           \\
             0       & a_{n n}-\alpha^{\prime} A_{n-1}^{-1} \alpha
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 再记 $T=P\left(\begin{array}{cc}T_{1} & 0 \\ 0 & 1\end{array}\right)$ 就有
 \begin{equation*}
@@ -934,7 +934,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
         \end{array}\right)=\left(\begin{array}{cc}
             T_{1}^{\prime} A_{n-1} T_{1} & 0                                           \\
             0                            & a_{n n}-\alpha^{\prime} A_{n-1}^{-1} \alpha
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 是对角矩阵, 同时 $T$ 显然是特殊三角矩阵.
 
@@ -946,7 +946,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right), T=\left(\begin{array}{cc}
         T_{1} & T_{2} \\
         O     & T_{4}
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 其中 $A_{1}, T_{1}$ 都是 $k$ 级方阵, 且 $T_{1}, T_{4}$ 都是特殊上三角矩阵. 于是直接有
 \begin{equation*}
@@ -968,13 +968,13 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
         \end{array}\right)=\left(\begin{array}{cc}
             T_{1}^{\prime} A_{1} T_{1} & *^{\prime} \\
             *^{\prime}                 & *^{\prime}
-        \end{array}\right)
+        \end{array}\right).
 \end{equation*}
 这说明 $T^{\prime} A T$ 的 $k$ 级顺序主子式为 $\left|T_{1}^{\prime} A_{1} T_{1}\right|=\left|A_{1}\right|$, 即 $A$ 与 $T^{\prime} A T$ 有完全相同的顺序主子式.
 
 {\heiti 注 1 .} 如果设 $A$ 的各阶顺序主子式为 $D_{k}(k=1,2, \cdots, n)$ 且非零, 则对角矩阵
 \begin{equation*}
-    T^{\prime} A T=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n}}{D_{n-1}}\right\}
+    T^{\prime} A T=\operatorname{diag}\left\{D_{1}, \frac{D_{2}}{D_{1}}, \cdots, \frac{D_{n}}{D_{n-1}}\right\}.
 \end{equation*}
 是唯一确定的.
 
@@ -1013,7 +1013,7 @@ $\left(\begin{array}{cc}E & -A^{-1} B \\ O & E\end{array}\right)^{\prime}\left(\
     \end{array}\right) \rightarrow\left(\begin{array}{cccc}
         E & O & A^{-1} & -A^{-1} B C^{-1} \\
         O & E & O      & C^{-1}
-    \end{array}\right)
+    \end{array}\right).
 \end{equation*}
 于是 $\left(\begin{array}{ll}A & B \\ O & C\end{array}\right)$ 的逆矩阵为 $\left(\begin{array}{cc}A^{-1} & -A^{-1} B C^{-1} \\ 0 & C^{-1}\end{array}\right) .$
 
