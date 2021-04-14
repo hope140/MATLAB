@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{ctex}                               % 显示中文，更改字体
+\usepackage{ctex}                               % 显示中文,更改字体
 \usepackage{indentfirst}                        % 首行缩进
 \usepackage{setspace}                           % 调整页行距
 \usepackage{geometry}                           % 设置页边距
@@ -11,7 +11,7 @@
 
 
 \geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
-%设置页边距，此处参考word默认间距
+%设置页边距,此处参考word默认间距
 
 \begin{document}
 \setcounter{page}{87}                           % 文章页码从87开始重新编排
@@ -22,8 +22,8 @@
 %   \end{pmatrix}
 \begin{equation*}                               % 带*的公式环境没有编号
     \begin{split}                               % 公式环境内的对齐方式(split)
-        &\left(                                 % 在需要对齐的元素前&，换行使用\\实现
-        \begin{array}{cc}                       % 尝试matrix，此为latex宏包实现
+        &\left(                                 % 在需要对齐的元素前&,换行使用\\实现
+        \begin{array}{cc}                       % 尝试matrix,此为latex宏包实现
             A + B & O \\                        % Markdown环境下无法使用
             O     & O % 建议多使用array加括号实现
         \end{array}
@@ -83,20 +83,20 @@
     r \left(A^3\right) + r \left(B\right)
     =
     r \left(A\right) + r \left(B\right)$
-;而显然又有$r \left(A + B\right) \le \left(A\right) + r \left(B\right)$，所以$r \left(A + B\right) = r \left(A\right) + r \left(B\right)$.
+;而显然又有$r \left(A + B\right) \le \left(A\right) + r \left(B\right)$,所以$r \left(A + B\right) = r \left(A\right) + r \left(B\right)$.
 
 \vspace{1ex}
-同样的方法，请思考下面的例题：
+同样的方法,请思考下面的例题：
 
 \vspace{1ex}
-\heiti{例题 4.24.}\kaishu{已知 $A$ , $B$都是$n$级方阵，且$AB = BA =O$，证明：存在正整数$m$使得$r \left(A^m + B^m\right) = r \left(A^m\right) + r\left(B^m\right)$.$\left(\text{试问：}m = n\text{可以吗？}\right)$}
+\heiti{例题 4.24.}\kaishu{已知 $A$ , $B$都是$n$级方阵,且$AB = BA =O$,证明：存在正整数$m$使得$r \left(A^m + B^m\right) = r \left(A^m\right) + r\left(B^m\right)$.$\left(\text{试问：}m = n\text{可以吗？}\right)$}
 
-当然，矩阵变换的手段多变，还有少数题目的技巧根本想不到，为此我们可以另辟蹊径，用方程组的手段去解决.扬哥列举一个：
+当然,矩阵变换的手段多变,还有少数题目的技巧根本想不到,为此我们可以另辟蹊径,用方程组的手段去解决.扬哥列举一个：
 
 \vspace{1ex}
-\heiti{例题 4.25.}\kaishu{设$A$，$B$是数域$P$上的$n$级矩阵，且$AB = BA$,证明r $\left(A\right) + r \left(B\right) \ge r \left(AB\right) + r \left(A + B\right)$.}
+\heiti{例题 4.25.}\kaishu{设$A$,$B$是数域$P$上的$n$级矩阵,且$AB = BA$,证明r $\left(A\right) + r \left(B\right) \ge r \left(AB\right) + r \left(A + B\right)$.}
 
-\heiti{证明. 方法一. }用分块矩阵的方法，我们知道
+\heiti{证明. 方法一. }用分块矩阵的方法,我们知道
 \begin{equation*}
     \left(
     \begin{array}{cc}
@@ -119,7 +119,7 @@
     \end{array}
     \right).
 \end{equation*}
-结合$AB = BA$，我们知道
+结合$AB = BA$,我们知道
 \begin{equation*}
     \left(
     \begin{array}{cc}
@@ -132,7 +132,7 @@
             A + B & O \\
             -A    & E
         \end{array}
-        \right)}_{\text{非广义初等变换，难以想到}}
+        \right)}_{\text{非广义初等变换,难以想到}}
     =
     \left(
     \begin{array}{cc}
@@ -168,7 +168,7 @@
     \ge
     r \left(AB\right) + r \left(A + B\right).
 \end{equation*}
-\heiti{方法二.}设方程组$AX = 0$与$BX = 0$的解空间分别是$V_1$，$V_2$，方程组$ABX = BAX = 0$与$\left(A + B\right)X = 0$的解空间分别为$W_1$，$W_2$，则$V_1\subseteq W_1$，$V_2\subseteq W_1$，从而$V_1 + V_2\subseteq W_1$，同时$V_1\cap V_2 \subseteq W_1$，利用维数公式就有
+\heiti{方法二.}设方程组$AX = 0$与$BX = 0$的解空间分别是$V_1$,$V_2$,方程组$ABX = BAX = 0$与$\left(A + B\right)X = 0$的解空间分别为$W_1$,$W_2$,则$V_1\subseteq W_1$,$V_2\subseteq W_1$,从而$V_1 + V_2\subseteq W_1$,同时$V_1\cap V_2 \subseteq W_1$,利用维数公式就有
 \begin{equation*}
     \mathrm{dim}V_1 + \mathrm{dim}V_2 = \mathrm{dim}\left(V_1 + V_2\right) + \mathrm{dim}\left(V_1 \cap V_2\right) \le \mathrm{dim}W_1 + \mathrm{dim}W_2.
 \end{equation*}
@@ -185,7 +185,7 @@
 \noindent{\heiti{4.7.3 打洞原理证明秩不等式}}
 
 \vspace{1ex}
-\heiti{命题4.5.}\kaishu{已知$A$，$D$分别为$n$级与$m$级矩阵，且$A$可逆，$B$，$C$分别是$n\times m$与$m\times n$矩阵，利用打洞原理有}
+\heiti{命题4.5.}\kaishu{已知$A$,$D$分别为$n$级与$m$级矩阵,且$A$可逆,$B$,$C$分别是$n\times m$与$m\times n$矩阵,利用打洞原理有}
 \begin{equation*}
     \left(
     \begin{array}{cc}
@@ -218,7 +218,7 @@
     n + r \left(D - CA^{-1}B\right).
 \end{equation*}
 
-\heiti{例题4.26.}\kaishu{已知$A$是一个$s\times n$矩阵，证明$r \left(E_n - A'A\right)-r \left(E_s - AA'\right) = n - s$.}
+\heiti{例题4.26.}\kaishu{已知$A$是一个$s\times n$矩阵,证明$r \left(E_n - A'A\right)-r \left(E_s - AA'\right) = n - s$.}
 
 \vspace{1ex}
 \heiti{证明.}对$\left(\begin{array}{cc}
@@ -260,18 +260,18 @@
             E_n & O         \\
             O   & E_s - AA'
         \end{array}
-    \right)$,即$s + r \left(E_n - A'A\right) = n + r \left(E_s - AA'\right)$，即
+    \right)$,即$s + r \left(E_n - A'A\right) = n + r \left(E_s - AA'\right)$,即
 \begin{equation*}
     r \left(E_n - A'A\right) = n + r \left(E_s - AA'\right) = n - s
 \end{equation*}
 
-\heiti{例题4.27.}\kaishu{已知$A$是$n$级可逆矩阵，$\alpha$ ,$\beta$ 是任意两个$n$维列向量，则$r \left(A + \alpha \beta '\right) \ge n - 1$.}
+\heiti{例题4.27.}\kaishu{已知$A$是$n$级可逆矩阵,$\alpha$ ,$\beta$ 是任意两个$n$维列向量,则$r \left(A + \alpha \beta '\right) \ge n - 1$.}
 
 \vspace{2ex}
 \noindent{\heiti{\zihao{4} 4.8 等价标准形}}
 
 \vspace{1ex}
-在讨论矩阵的等价标准形之前，我们先给出了一个重要的引理，它在矩阵分解中有非常重要的应用，可以达到出奇制胜的效果.
+在讨论矩阵的等价标准形之前,我们先给出了一个重要的引理,它在矩阵分解中有非常重要的应用,可以达到出奇制胜的效果.
 
 \vspace{1ex}
 \heiti{引理4.1.} $s \times n$的矩阵$\left(\begin{array}{cc}
@@ -303,7 +303,7 @@
             E_r & O \\
             O   & O
         \end{array}
-    \right)$是方阵时，还有另外一种分解：
+    \right)$是方阵时,还有另外一种分解：
 \begin{equation*}
     \left(
     \begin{array}{cc}
@@ -326,7 +326,7 @@
     \right).
 \end{equation*}
 
-\heiti{Theorem 4.9} $\left(\text{等价标准形}\right)$. \kaishu{设$A$是一个秩为$r$的$s \times n$矩阵，则存在$s$级可逆矩阵$P$与$n$级可逆矩阵$Q$使得}
+\heiti{Theorem 4.9} $\left(\text{等价标准形}\right)$. \kaishu{设$A$是一个秩为$r$的$s \times n$矩阵,则存在$s$级可逆矩阵$P$与$n$级可逆矩阵$Q$使得}
 \begin{equation*}
     A = P \left(
     \begin{array}{cc}
@@ -338,7 +338,203 @@
 
 \heiti{命题4.6.} \kaishu{任意一个非零矩阵都可以分解成一个列满秩矩阵与一个行满秩矩阵的乘积.}
 
-\heiti{证明.} 设矩阵$A$是$s \times n$矩阵，且$r \left(A\right) = r > 0$，则存在$s$级可逆矩阵$P$与$n$级可逆矩阵$Q$使得
+\heiti{证明.} 设矩阵$A$是$s \times n$矩阵,且$r \left(A\right) = r > 0$,则存在$s$级可逆矩阵$P$与$n$级可逆矩阵$Q$使得
+\begin{equation*}
+    A=P\left(\begin{array}{cc}
+            E_{r} & O \\
+            O     & O
+        \end{array}\right)
+    \underline{Q=P\left(\begin{array}{c}
+            E_{r} \\
+            O
+        \end{array}\right)}
+    \underline{\left(\begin{array}{ll}
+            E_{r} & O
+        \end{array}\right) Q}
+\end{equation*}
+现在记$P_1 = P \left(
+    \begin{array}{c}
+            E_r \\
+            O
+        \end{array}
+    \right)$,$Q_1 = \left(
+    \begin{array}{cc}
+            E_r & O
+        \end{array}
+    \right)Q$,则$A = P_1Q_1$,且$P_1$是$s \times r$的列满秩矩阵,$Q_1$是$r \times n$的行满秩矩阵.
+
+注. 上面解答过程中,不能写$P \left(
+    \begin{array}{c}
+            E_r \\
+            O
+        \end{array}
+    \right)
+    =
+    \left(
+    \begin{array}{c}
+            P \\
+            O
+        \end{array}
+    \right)$,原因是$P$不能与$E_r$做乘法.
+
+\heiti{例题4.28.}\kaishu{设$B_1$,$B_2$都是数域$P$上的$s \times n$的列满秩矩阵，证明：存在数域$P$上的$s$级可逆矩阵$C$使得$B_2 = CB_1$.}
+
+\heiti{证明.} 由于$B_1$,$B_2$都列满秩,所以存在可逆的$s$级矩阵$Q$,$R$使得
+\begin{equation*}
+    Q B_{1}=\left(\begin{array}{c}
+            E_{r} \\
+            O
+        \end{array}\right)=R B_{2}.
+\end{equation*}
+
+所以$B_2 = R^{-1}QB_1$,即取$C = R^{-1}Q$即可.
+
+\heiti{例题4.29.}\kaishu{都是数域$P$上的$s \times n$的行满秩矩阵,证明:存在数域$P$上的$n$级可逆矩阵$D$使得$C_2 = C_1D$.}
+
+\heiti{例题4.30.} \kaishu{任意秩为$r \left(r > 0\right)$的矩阵都可以分解成$r$个秩为1的矩阵之和.}
+
+\heiti{证明.}设$A_{s \times n}$是一个秩为$r$的矩阵,则存在$s$级与$n$级可逆矩阵$P_1Q$使得
+\begin{equation*}
+    A=P\left(\begin{array}{cc}
+            E_{r} & O \\
+            O     & O
+        \end{array}\right) Q=P\left(E_{11}+E_{22}+\cdots+E_{r r}\right) Q=P E_{11} Q+P E_{22} Q+\cdots+P E_{r r} Q.
+\end{equation*}
+
+由于$E_{i i} \left(i = 1,2, \cdots , r\right)$的秩为1,所以$PE_{i i}Q$的秩也为1.
+
+\heiti{例题4.31.} \kaishu{已知$A$是一个秩为$r$的$s \times n$矩阵,求矩阵方程$AXA = A$的通解.}
+
+\heiti{证明.} 由于$r \left(A\right) = r$,所以存在可逆矩阵$P_1Q$使得$A = P \left(
+    \begin{array}{cc}
+            E_r & O \\
+            O   & O
+        \end{array}
+    \right)$,代入到$AXA = A$就有
+\begin{equation*}
+    P\left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right) Q X P\left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right) Q=P\left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right) Q.
+\end{equation*}
+消去 $P, Q$ 就有
+\begin{equation*}
+    \left(\begin{array}{cc}
+        E_{r} & O \\
+        0     & O
+    \end{array}\right) Q X P\left(\begin{array}{cc}
+        E_{r} & O \\
+        0     & O
+    \end{array}\right)=\left(\begin{array}{cc}
+        E_{r} & O \\
+        0     & O
+    \end{array}\right).
+\end{equation*}
+现在对 $Q X P$ 分块, 设 $Q X P=\left(\begin{array}{cc}H & B \\ C & D\end{array}\right)$, 代入上式就有
+\begin{equation*}
+    \left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right)\left(\begin{array}{cc}
+        H & B \\
+        C & D
+    \end{array}\right)\left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right)=\left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right).
+\end{equation*}
+化简即得
+\begin{equation*}
+    \left(\begin{array}{ll}
+        H & O \\
+        O & O
+    \end{array}\right)=\left(\begin{array}{cc}
+        E_{r} & O \\
+        O     & O
+    \end{array}\right)
+\end{equation*}
+从而得到$H = E_r$,而$B$,$C$,$D$可以任意取,所以$Q X P = \left(
+    \begin{array}{cc}
+            E_r & B \\
+            C   & D
+        \end{array}
+    \right)$,解出$X$就有
+\begin{equation*}
+    X=Q^{-1}\left(\begin{array}{cc}
+            E_{r} & B \\
+            C     & D
+        \end{array}\right) P^{-1}.
+\end{equation*}
+其中 $B, C, D$ 分别是任意的 $r \times(s-r),(n-r) \times r,(n-r) \times(s-r)$ 矩阵.
+
+\vspace{1ex}
+\heiti{扬哥经验: 一个矩阵题目中,如果什么条件都没有或者只告诉了矩阵的秩,记得考虑一下等价标准形.}
+
+\vspace{2ex}
+\noindent{\heiti{\zihao{4} 4.9 矩阵的迹与幂零矩阵}}
+\vspace{2ex}
+
+一个方阵$A$的所有主对角元素之和称为$A$的迹,记为$t r \left(A\right)$.迹常用的性质总结为如下定理:
+
+\heiti{Throrem 4.10.} 
+\kaishu{已知$A$,$B$是两个$n$级矩阵,$k$是一个常数,则
+
+(1)$tr \left(kA\right) =ktr \left(A\right)$.
+
+(2)$tr \left(A + B\right) = tr \left(A\right) + tr \left(B\right)$.
+
+(3)$tr \left(AB\right) = tr \left(BA\right)$.
+
+(4)如果$A$是一个实方阵,则$A = O \Longleftrightarrow tr \left(A'A\right) = 0$.}
+
+\heiti{证明.} (1),(2)是显然的.
+
+(3)就是求和号交换顺序,读者自己证.注意本条是迹最重要的性质.
+
+(4)注意到$tr \left(A'A\right)$等于$A$的所有元素的平方和.
+
+\vspace{1ex}
+\heiti{例题4.32} \kaishu{已知$A$是一个$n$级实对称方阵,且$A^2 = O$,则$A = O$.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
