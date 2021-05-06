@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{祁志远2015三种直角坐标牛顿潮流算法的收敛性比较}
+祁志远 and 肖仕武.
+\newblock 三种直角坐标牛顿潮流算法的收敛性比较.
+\newblock {\em 华北电力大学学报 (自然科学版)}, 5, 2015.
+
+\bibitem{余卓平2017无人车运动规划算法综述}
+余卓平, 李奕姗, and 熊璐.
+\newblock 无人车运动规划算法综述.
+\newblock {\em 同济大学学报 (自然科学版)}, 45(8):1150--1159, 2017.
+
+\bibitem{周慧子2017面向自动驾驶的动态路径规划避障算法}
+周慧子, 胡学敏, 陈龙, 田梅, and 熊豆.
+\newblock 面向自动驾驶的动态路径规划避障算法.
+\newblock {\em 计算机应用}, 37(3):883--888, 2017.
+
+\bibitem{王富奎2018高动态环境下智能车局部路径规划研究}
+王富奎.
+\newblock 高动态环境下智能车局部路径规划研究.
+\newblock Master's thesis, 电子科技大学, 2018.
+
+\bibitem{li2017nonlinear}
+Bai Li, Zhijiang Shao, Youmin Zhang, and Pu~Li.
+\newblock Nonlinear programming for multi-vehicle motion planning with homotopy
+  initialization strategies.
+\newblock In {\em 2017 13th IEEE Conference on Automation Science and
+  Engineering (CASE)}, pages 118--123. IEEE, 2017.
+
+\bibitem{李柏2018自动驾驶车辆运动规划方法综述}
+李柏, 张友民, and 邵之江.
+\newblock 自动驾驶车辆运动规划方法综述.
+\newblock {\em 收藏}, 6, 2018.
+
+\bibitem{li2018balancing}
+Bai Li, Youmin Zhang, Yiheng Feng, Yue Zhang, Yuming Ge, and Zhijiang Shao.
+\newblock Balancing computation speed and quality: A decentralized motion
+  planning method for cooperative lane changes of connected and automated
+  vehicles.
+\newblock {\em IEEE Transactions on Intelligent Vehicles}, 3(3):340--350, 2018.
+
+\bibitem{姚君延2018基于深度增强学习的路径规划算法研究}
+姚君延.
+\newblock 基于深度增强学习的路径规划算法研究.
+\newblock Master's thesis, 电子科技大学, 2018.
+
+\end{thebibliography}
