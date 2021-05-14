@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{ctex}                               % 显示中文,更改字体
+\usepackage{indentfirst}                        % 首行缩进
+\usepackage{setspace}                           % 调整页行距
+\usepackage{geometry}                           % 设置页边距
+\usepackage{makecell}                           % 处理表格
+\usepackage{amsmath}                            % 公式处理
+\usepackage{amssymb}                            % 公式处理
+\usepackage{amsthm}                             % 数学字符
+\usepackage{mathrsfs}                           % 数学字符
+\usepackage{enumerate}                          % 编号排版
+\usepackage{algorithmic}
+
+\renewcommand{\baselinestretch}{1.5}
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
+%设置页边距,此处参考word默认间距
+
+\begin{document}
+\setlength{\parindent}{2em}                       % 首行缩进两字符
+% \setcounter{page}{87}                           % 文章页码从87开始重新编排
+{\heiti 1.}已知4阶行列式${D}$的第3行元素分别是-1,0,2,4，第4行元素对应的余子式依次是5,10,$a$,4，求$a$的值。
+\begin{enumerate}[\qquad 解：]
+    \item 1、因为$a_{31}A_{41}+a_{32}A_{42}+a_{33}A_{43}+a_{34}A_{44}=0$,
+          这里 $a_{i j}$ 和 $A$ 分别是第 ${i}$ 行第 $j$ 列处的元素和该元素的 \\
+          代数余子式,所以有 $-1 \times(-5)+0 \times 10+2 \times(-a)+4 \times 4=0$,
+          可得 $a=\frac{21}{2}$
+\end{enumerate}
+
+\vspace{1ex}
+{\heiti 2.} 已知矩阵 $A, B$ 满足关系 $A B-B=A$, 其中 $B=\left(
+    \begin{array}{ccc}
+            1 & -2 & 0 \\
+            2 & 1  & 0 \\
+            0 & 0  & 2
+        \end{array}
+    \right)$
+, 求矩阵$A$。
+\begin{enumerate}[\qquad 解：]
+    \item 2、 因为 ${A B-A=B}$, 所以 $A(B-E)=B$, $A=B(B-E)^{-1}=\left(
+              \begin{array}{ccc}
+                      1            & \frac{1}{2} & 0 \\
+                      -\frac{1}{2} & 1           & 0 \\
+                      0            & 0           & 2
+                  \end{array}
+              \right)$
+\end{enumerate}
+
+\vspace{1ex}
+{\heiti 3.}设 $A^{*}$ 为 $3$ 阶方阵 $A$ 的伴随矩阵, $|A|=2$, 计算行列式 $|(3 A)^{-1}-\left.\frac{1}{2} A^{*}\right|$
+\begin{enumerate}[\qquad 解：]
+    \item 3. $|(3 A)^{-1}-\left.\frac{1}{2} A^{*}\right|=|\frac{1}{3}A^{-1}-A^{-1}|=|-\frac{2}{3}A^{-1}|=(-\frac{2}{3})^{3}|A^{-1}|=-\frac{4}{27}$
+\end{enumerate}
+
+\vspace{1ex}
+{\heiti 4.}如果多项式 $f(x), g(x)$ 不全为零，证明 $: \frac{f(x)}{(f(x), g(x))}$ 与 $\frac{g(x)}{(f(x), g(x))}$ 互素。
+
+证: 存在多项式 $u(x), v(x),$ 使 $(f(x), g(x))=u(x) f(x)+v(x) g(x)$
+
+因而 $u(x) \frac{f(x)}{(f(x), g(x))}+v(x) \frac{g(x)}{(f(x), g(x))}=1$
+
+由定理 $3, \left(\frac{f(x)}{(f(x),g(x))},\frac{g(x)}{(f(x), g(x))}\right)=1$
+
+{\heiti 5.}证明: $x_{0}$ 是 $f(x)$ 的 $k$ 重根的充分必要条件是 $f\left(x_{0}\right)=f^{\prime}\left(x_{0}\right)=\cdots=f^{k-1}\left(x_{0}\right)=0$ 而$f^{k}\left(x_{0}\right) \neq 0$
+
+证明： 必要性: 设 $x_{0}$ 是 $f(x)$ 的 $k$ 重根。 那么 $x_{0}$ 是 $f^{\prime}(x)$ 的 $k-1$ 重根, $\cdots \cdots$, 是 $f^{t-1}(x)$ 的
+1 重根, 是 $f^{\prime}(x)$ 的 0 重根, 即不是 $f^{*}(x)$ 的根, 所以 $f\left(x_{0}\right)=f^{\prime}\left(x_{0}\right)=\cdots=f^{k-1}\left(x_{0}\right)=0$
+而 $f^{k}\left(x_{0}\right) \neq 0 .$
+充分性: 设 $f(x_{0})=f^{\prime}\left(x_{0}\right)=\cdots=f^{t-1}\left(x_{0}\right)=0$ 而 $f^{\prime}\left(x_{0}\right) \neq 0 .$ 设 $x_{0}$ 是 $f(x)$ 的l重根.
+由必要性的证明 $f\left(x_{0}\right)=f^{\prime}\left(x_{0}\right)=\cdots=f^{\prime-1}\left(x_{0}\right)=0$ 而 $f^{\prime}\left(x_{0}\right) \neq 0 .$ 从而 $l=k .$
+
+
+{\heiti 6.}二次型 $f\left(x_{1}, x_{2}, x_{3}\right)=\left(x_{1}+x_{2}\right)^{2}+\left(x_{2}+x_{3}\right)^{2}-\left(x_{3}-x_{1}\right)^{2}$ 的正贯性指数与负惯性指数依次为
+
+$(A) 2,0 $
+
+$(B) 1,1 $
+
+$(C) 2,1 $
+
+$(D) 1,2 $
+
+解：$f\left(x_{1}, x_{2}, x_{3}\right)=\left(x_{1}+x_{2}\right)^{2}+\left(x_{2}+x_{3}\right)^{2}-\left(x_{3}-x_{1}\right)^{2}=2 x_{2}^{2}+2 x_{1} x_{2}+2 x_{2} x_{3}+2 x_{1} x_{3}$
+
+所以 $A=\left(\begin{array}{lll}0 & 1 & 1 \\ 1 & 2 & 1 \\ 1 & 1 & 0\end{array}\right)$, 故特征多项式为
+$$
+    |\lambda E-A|=\left|\begin{array}{rrr}
+        \lambda & -1 & -1      \\
+        -1      & -2 & -1      \\
+        -1      & -1 & \lambda
+    \end{array}\right|=(\lambda+1)(\lambda-3) \lambda
+$$
+
+令上式等于零，故特征值为$-1,3,0$,故该二次型的正惯性指数为1，负惯性指数为1，故选$B$.\\
+
+{\heiti 7.} 设 3 阶矩阵 $\boldsymbol{A}=\left(\alpha_{1}, \alpha_{2}, \alpha_{3}\right), \quad B=\left(\beta_{1}, \beta_{2}, \beta_{3}\right)$, 若向量组 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 可以由向量组 $\beta_{1}, \beta_{2}$
+线性表出，则\\
+(A) $A x=0$ 的解均为 $B x=0$ 的解.\\
+(B) $A^{T} x=0$ 的解均为 $B^{T} x=0$ 的解.\\
+(C) $B x=0$ 的解均为 $A x=0$ 的解.\\
+(D) $B^{T} x=0$ 的解均为 $A^{T} x=0$ 的解. \\
+令 $A=\left(a_{1}, a_{2}, a_{3}\right), B=\left(\beta_{1}, \beta_{2}, \beta_{3}\right)$, 由题 $a_{1}, a_{2}, a_{3}$ 可由 $\beta_{1}, \beta_{2}, \beta_{3}$ 线性表示，即存在矩阵$A$,
+使得 $B P=A$, 则当 $B^{T} x_{0}=0$ 时， $A^{T} x_{0}=(B P)^{T} x_{0}=p^{T} B^{T} x_{0}=0 .$ 恒成立，即选 $\mathrm{D}$.
+
+    {\heiti 8.}已知 $\alpha_{1}=\left(\begin{array}{l}1 \\ 0 \\ 1\end{array}\right), \alpha_{2}=\left(\begin{array}{l}1 \\ 2 \\ 1\end{array}\right), \alpha_{3}=\left(\begin{array}{l}3 \\ 1 \\ 2\end{array}\right)$, 记 $\beta_{1}=\alpha_{1}, \beta_{2}=\alpha_{2}-k \beta_{1}, \beta_{3}=\alpha_{3}-l_{1} \beta_{1}-l_{2} \beta_{2}$,
+若 $\beta_{1}, \beta_{2},\beta_{3}$ 两两正交，则 $l_{1}, l_{2}$ 依次为
+$\begin{array}{llll}\text { (A) } \frac{5}{2}, \frac{1}{2} . & \text { (B) }-\frac{5}{2}, \frac{1}{2} . & \text { (C) } \frac{5}{2},-\frac{1}{2} . & \text { (D) }-\frac{5}{2},-\frac{1}{2} \text { . }\end{array}$
+
+解： 利用斯密特正交化方法知
+$$\begin{array}{c}
+        \beta_{2}=\alpha_{2}-\frac{\left[\alpha_{2}, \beta_{1}\right]}{\left[\beta_{1}, \beta_{1}\right]} \beta_{1}=\left(\begin{array}{l}
+                0 \\
+                2 \\
+            \end{array}\right),                                                \\
+        \beta_{3}=\alpha_{3}-\frac{\left[\alpha_{3}, \beta_{1}\right]}{\left[\beta_{1}, \beta_{1}\right]} \beta_{1}-\frac{\left[\alpha_{3}, \beta_{2}\right]}{\left[\beta_{2}, \beta_{2}\right]} \beta_{2}, \\
+        \text { 故 } l_{1}=\frac{\left[\alpha_{3}, \beta_{1}\right]}{\left[\beta_{1}, \beta_{1}\right]}=\frac{5}{2}, l_{2}=\frac{\left[\alpha_{3}, \beta_{2}\right]}{\left[\beta_{2}, \beta_{2}\right]}=\frac{1}{2}, \text { 故选 } \mathrm{A} .
+    \end{array}$$\\
+
+{\heiti 9.} 已知行列式 $D=\left|\begin{array}{llll}-1 & 2 & -11 & 4 \\ 1 & 2 & \quad6 & 2 \\ 1 & 1 & \quad2 & 1 \\ 4 & 7 & \quad8 & 3\end{array}\right| .$ 求 $A_{13}+A_{23}+A_{33}+A_{43}$, 其中 $A_{ij}$ 是元素
+$a_{ij}$ 的代数余子式。
+
+解: 考虑行列式 $C=\left|\begin{array}{cccc}-1 & 2 & 1 & 4 \\ 1 & 2 & 1 & 2 \\ 1 & 1 & 1 & 1 \\ 4 & 7 & 1 & 3\end{array}\right|$, 按它的第三列展开。由于 $c$ 和 $D$ 除了第三
+列外均相同，故 $C=A_{13}+A_{23}+A_{33}+A_{43}$, 而计算可得
+$C=\left|\begin{array}{llll}-1 & 2 & 1 & 4 \\ 1 & 2 & 1 & 2 \\ 1 & 1 & 1 & 1 \\ 4 & 7 & 1 & 3\end{array}\right|=2 .$ 所以 $A_{13}+A_{23}+A_{33}+A_{t,}=2 .$\\
+
+{\heiti 10.}计算 $n$ 阶行列式 $\left|\begin{array}{llllll}a_{1} & b_{1} & 0 & \mathrm{~L} & 0 & 0 \\ 0 & a_{2} & b_{2} & \mathrm{~L} & 0 & 0 \\ \mathrm{M} & \mathrm{M} & \mathrm{M} & & \mathrm{M} & \mathrm{M} \\ 0 & 0 & 0 & \mathrm{~L} & a_{n-1} & b_{n+1} \\ b_{*} & 0 & 0 & \mathrm{~L} & 0 & a_{*}\end{array}\right|$.\\
+解: 按第一列展开得:
+$\left|\begin{array}{cccccc}a_{1} & b_{1} & 0 & \cdots & 0 & 0 \\ 0 & a_{2} & b_{2} & \cdots & 0 & 0 \\ \vdots & \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & 0 & \cdots & a_{s-1} & b_{z-1} \\ b_{n} & 0 & 0 & \cdots & 0 & a_{n}\end{array}\right|$
+$=a_{1}\left|\begin{array}{ccccc}a_{2} & b_{2} & \cdots & 0 & 0 \\ \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & \cdots & a_{n-1} & b_{n-1} \\ 0 & 0 & \cdots & 0 & a_{n}\end{array}\right|+(-1)^{n+1} b\left|\begin{array}{ccccc}b_{1} & 0 & \cdots & 0 & 0 \\ a_{2} & b_{2} & \cdots & 0 & 0 \\ \vdots & \vdots & & \vdots & \vdots \\ 0 & 0 & \cdots & a_{n-1} & b_{n-1}\end{array}\right|$
+$=a_{1} a_{2} \cdots a_{n}+(-1)^{n+1} b_{1} b_{2} \cdots b_{n}$
+
+\end{document}
