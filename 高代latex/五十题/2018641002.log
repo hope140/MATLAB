@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  14 MAY 2021 00:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  17 MAY 2021 09:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -519,40 +519,77 @@ LaTeX Warning: The counter will not be printed.
              The label is: \qquad 解： on input line 50.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 证： on input line 57.
 
- []
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 证： on input line 66.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 解： on input line 77.
 
 [1
 
 ]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 解： on input line 99.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
+Underfull \hbox (badness 10000) in paragraph at lines 122--125
 
  []
 
-
-Overfull \hbox (53.99252pt too wide) in paragraph at lines 125--130
+[2]
+Overfull \hbox (53.99252pt too wide) in paragraph at lines 126--131
 \TU/SimSun(0)/m/n/10.53937 解\TU/lmr/m/n/10.53937 : \TU/SimSun(0)/m/n/10.53937 按 第 一 列 展 开 得\TU/lmr/m/n/10.53937 : $[]$ $\OT1/cmr/m/n/10.53937 = \OML/cmm/m/it/10.53937 a[] [] \OT1/cmr/m/n/10.53937 + (\OMS/cmsy/m/n/10.53937 ^^@\OT1/cmr/m/n/10.53937 1)[]\OML/cmm/m/it/10.53937 b []$
  []
 
-[2] [3] (./2018641002.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--162
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 216--225
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
+
+ []
+
+[6] (./2018641002.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 8536 strings out of 481358
- 215847 string characters out of 5927881
- 511160 words of memory out of 5000000
- 25788 multiletter control sequences out of 15000+600000
- 538711 words of font info for 71 fonts, out of 8000000 for 9000
+ 8581 strings out of 481358
+ 218751 string characters out of 5927881
+ 506160 words of memory out of 5000000
+ 25832 multiletter control sequences out of 15000+600000
+ 538719 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,11n,68p,422b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,11n,68p,428b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2018641002.pdf (3 pages).
+Output written on 2018641002.pdf (6 pages).
