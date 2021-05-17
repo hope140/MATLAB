@@ -384,31 +384,1231 @@ $$tr(A_i A_j)=\delta_{ij},1\leq i,j\leq n,$$
 \qquad 这里$tr(A)$表示矩阵$A$的迹，即它的对角元之和，试证明$m\leq n$．
 \begin{enumerate}[\qquad 证明：]
     \item 因为$A_1,A_2,\cdots,A_m$是$m$个两两可换的互不相同的$n$阶实对称矩阵,
-所以存在一个$n$阶正交矩阵$P$使得${P^T}{A_i}P$都是对角阵．\\ 
-记${P^T}{A_i}P=diag(\lambda_{i1},\lambda_{i2},\cdots,\lambda_{in})$，
-其中$i=1,2,\cdots,m$．根据题意
-\begin{equation*}
-    tr(A_i A_j)=\delta_{ij}=
-    \left\{
-    \begin{array}{ccc}
-        1,i=j     \\
-        0,i\neq j \\
-    \end{array}
-    \right.
-\end{equation*}
-由$tr$的性质，
-$$tr(A_i A_j)=tr({A_i}{P^T}P{A_j}P{P^T})=tr({P^T}{A_i}P{P^T}{A_j}P)=\sum\limits_{k=1}^{n}\lambda_{ik}\lambda_{jk},$$
-记$u_i=(\lambda_{i1},\lambda_{i2},\cdots,\lambda_{in})$，则有
-\begin{equation*}
-    (u_i,u_j)=
-    \left\{
-    \begin{array}{ccc}
-        1,i=j     \\
-        0,i\neq j \\
-    \end{array}
-    \right.
-\end{equation*}
-因此$u_1,u_2,\cdots,u_m$是一组标准正交组，从而其个数小于$R^n$的维数，即有
-$$m\leq n.$$
+          所以存在一个$n$阶正交矩阵$P$使得${P^T}{A_i}P$都是对角阵．\\
+          记${P^T}{A_i}P=diag(\lambda_{i1},\lambda_{i2},\cdots,\lambda_{in})$，
+          其中$i=1,2,\cdots,m$．根据题意
+          \begin{equation*}
+              tr(A_i A_j)=\delta_{ij}=
+              \left\{
+              \begin{array}{ccc}
+                  1,i=j     \\
+                  0,i\neq j \\
+              \end{array}
+              \right.
+          \end{equation*}
+          由$tr$的性质，
+          $$tr(A_i A_j)=tr({A_i}{P^T}P{A_j}P{P^T})=tr({P^T}{A_i}P{P^T}{A_j}P)=\sum\limits_{k=1}^{n}\lambda_{ik}\lambda_{jk},$$
+          记$u_i=(\lambda_{i1},\lambda_{i2},\cdots,\lambda_{in})$，则有
+          \begin{equation*}
+              (u_i,u_j)=
+              \left\{
+              \begin{array}{ccc}
+                  1,i=j     \\
+                  0,i\neq j \\
+              \end{array}
+              \right.
+          \end{equation*}
+          因此$u_1,u_2,\cdots,u_m$是一组标准正交组，从而其个数小于$R^n$的维数，即有
+          $$m\leq n$$
 \end{enumerate}
+
+\vspace{1ex}
+{\heiti 16.}求下列 $n$ 阶实矩阵的行列式:
+
+(1) $A=\left(a_{i j}\right)$, 其中 $a_{i j}=\left\{\begin{array}{lr}
+        1, & i \neq j, \text { 且 } i \text { 或 } j=1 \\
+        2, & i=j                                       \\
+        0, & \text { 其他. }
+    \end{array}\right.$
+
+(2) $B=\left(b_{i j}\right)$, 其中 $b_{i j}=f_{j}\left(a_{i}\right), f_{j}(x)$ 为首一的 $j-1$ 次实系数多项式,$a_{1}, \cdots, a_{n}$ 为两两不同的实数.
+\begin{enumerate}[\qquad 解：]
+    \item (1)根据题意写出矩阵A.
+          $$
+              A=\left[\begin{array}{ccccc}
+                      2      & 1      & 1      & \ldots & 1      \\
+                      1      & 2      & 0      & \ldots & 0      \\
+                      \vdots & \vdots & \vdots & \ddots & \vdots \\
+                      1      & 0      & 0      & \ldots & 2
+                  \end{array}\right]
+          $$
+          则
+          $$
+              |A|=\left|\begin{array}{ccccc}
+                  2      & 1      & 1      & \ldots & 1      \\
+                  1      & 2      & 0      & \ldots & 0      \\
+                  \vdots & \vdots & \vdots & \ddots & \vdots \\
+                  1      & 0      & 0      & \ldots & 2
+              \end{array}\right|
+          $$
+          从第二行开始,每一行乘上$\left(-\dfrac{1}{2}\right)$加到第一行,
+          $$
+              |A|=\left|\begin{array}{ccccc}
+                  2-\dfrac{n-1}{2} & 0      & 0      & \ldots & 0      \\
+                  1                & 2      & 0      & \ldots & 0      \\
+                  \vdots           & \vdots & \vdots & \ddots & \vdots \\
+                  1                & 0      & 0      & \ldots & 2
+              \end{array}\right|=\dfrac{5-n}{2} \cdot 2^{n-1}
+          $$
+          (2)根据题意,设出$f_j \left( x \right)$的表达式,
+          $$
+              \begin{array}{c}
+                  f_{1}(x)=1                     \\
+                  f_{2}(x)=x+c_{21}              \\
+                  f_{3}(x)=x^{2}+c_{31} x+c_{32} \\
+                  \vdots                         \\
+                  f_{n}(x)=x^{n-1}+c_{n 1} x^{n-2}+\cdots+c_{n, n-1}
+              \end{array}
+          $$
+          写出矩阵 $B$.
+          $$
+              B=\left[\begin{array}{cccc}
+                      f_{1}\left(a_{1}\right) & f_{2}\left(a_{1}\right) & \ldots & f_{n}\left(a_{1}\right) \\
+                      f_{1}\left(a_{2}\right) & f_{2}\left(a_{2}\right) & \ldots & f_{n}\left(a_{2}\right) \\
+                      \vdots                  & \vdots                  & \ddots & \vdots                  \\
+                      f_{1}\left(a_{n}\right) & f_{2}\left(a_{n}\right) & \ldots & f_{n}\left(a_{n}\right)
+                  \end{array}\right]
+          $$
+          所以
+          $$
+              |B|=\left|\begin{array}{lllc}
+                  1      & a_{1}+c_{21} & \ldots & a_{1}^{n-1}+c_{n 1} a_{1}^{n-2}+\cdots+c_{n, n-1} \\
+                  1      & a_{2}+c_{21} & \ldots & a_{2}^{n-1}+c_{n 1} a_{2}^{n-2}+\cdots+c_{n, n-1} \\
+                  \vdots & \vdots       & \ddots & \vdots                                            \\
+                  1      & a_{n}+c_{21} & \ldots & a_{n}^{n-1}+c_{n 1} a_{n}^{n-2}+\cdots+c_{n, n-1}
+              \end{array}\right|
+          $$
+          根据行列式的性质,按逐列展开,最后利用范德蒙德行列式,
+          $$
+              |B|=\left|\begin{array}{cccc}
+                  1      & a_{1}  & \ldots & a_{1}^{n-1} \\
+                  1      & a_{2}  & \ldots & a_{2}^{n-1} \\
+                  \vdots & \vdots & \ddots & \vdots      \\
+                  1      & a_{n}  & \ldots & a_{n}^{n-1}
+              \end{array}\right|=\prod_{1 \leq i<j \leq n}\left(a_{j}-a_{i}\right) .
+          $$
+\end{enumerate}
+
+\vspace{1ex}
+{\heiti 17.}设 $n$ 阶实矩阵 $\boldsymbol{A}=\left(a_{i j}\right)$ 半正定.
+\begin{enumerate}[\qquad (1)]
+    \item 证明: 存在 $\alpha_{i} \in R^{n}, i=1, \cdots, n$, 使得 $a_{i j}$ 等于 $\alpha_{i}$ 与 $\alpha_{j}$ 的内积;
+    \item 证明: $2 n$ 阶矩阵 $\left(\begin{array}{cc}A & A \\ A & A\end{array}\right)$ 半正定
+    \item 若实矩阵 $B=\left(b_{i j}\right)$ 也半正定, 令 $d_{i j}=a_{i j} b_{i j} .$ 证明: 矩阵 $D=\left(d_{i j}\right)$ 半正定.
+\end{enumerate}
+
+\begin{enumerate}[\qquad 证明：]
+    \item (1) 证明因为 $A$ 是半正定矩阵, 故存在实矩阵 $C$ 使 $A=C^{T} C .$ 取 $R^{n}$ 的一 组标准正交基 $\varepsilon_{1}, \varepsilon_{2}, \ldots, \varepsilon_{n}$, 记 $\left(\alpha_{1}, \ldots, \alpha_{n}\right)=\left(\varepsilon_{1}, \varepsilon_{2}, \ldots, \varepsilon_{n}\right) C$, 那么
+          $$
+              \begin{array}{c}
+                  G\left(\alpha_{1}, \ldots, \alpha_{n}\right)=\left[\begin{array}{c}
+                          \alpha_{1}^{T} \\
+                          \alpha_{2}^{T} \\
+                          \vdots         \\
+                          \alpha_{n}^{T}
+                      \end{array}\right]\left[\alpha_{1}, \alpha_{2}, \ldots, \alpha_{n}\right]= \\
+                  C^{T}\left[\begin{array}{c}
+                          \varepsilon_{1}^{T} \\
+                          \varepsilon_{2}^{T} \\
+                          \vdots              \\
+                          \varepsilon_{n}^{T}
+                      \end{array}\right]\left[\varepsilon_{1}, \varepsilon_{2}, \ldots, \varepsilon_{n}\right]=C^{T} C=A
+              \end{array}
+          $$
+          所以有 $a_{i j}=\alpha_{i}^{T} \alpha_{j} $. \\
+          (2) 因为 $A$ 是半正定的, 则 $A^{T}=A .$ 故
+          $$
+              \left[\begin{array}{ll}
+                      A & A \\
+                      A & A
+                  \end{array}\right]^{T}=\left[\begin{array}{ll}
+                      A^{T} & A^{T} \\
+                      A^{T} & A^{T}
+                  \end{array}\right]=\left[\begin{array}{ll}
+                      A & A \\
+                      A & A
+                  \end{array}\right]
+          $$
+          又因为
+          $$
+              \left[\begin{array}{cc}
+                      E  & 0 \\
+                      -E & E
+                  \end{array}\right]\left[\begin{array}{ll}
+                      A & A \\
+                      A & A
+                  \end{array}\right]\left[\begin{array}{cc}
+                      E & -E \\
+                      0 & E
+                  \end{array}\right]=\left[\begin{array}{cc}
+                      A & 0 \\
+                      0 & 0
+                  \end{array}\right]
+          $$
+          所以 $\left[\begin{array}{ll}A & A \\ A & A\end{array}\right]$ 合同于 $\left[\begin{array}{cc}A & 0 \\ 0 & 0\end{array}\right]$, 并且 $A$ 是半正定的, 从而 $\left[\begin{array}{cc}A & 0 \\ 0 & 0\end{array}\right]$ 半正定, 所以
+          $\left[\begin{array}{ll}\boldsymbol{A} & \boldsymbol{A} \\ \boldsymbol{A} & \boldsymbol{A}\end{array}\right]$ 半正定. \\
+          (3) 因为 $A, B$ 半正定，所以对称. 因此 $D$ 也对称. 根据定义，对任意的 $x=$
+          $\left(x_{1}, x_{2}, \ldots, x_{n}\right)^{T}$, 有
+          $$
+              x^{T} A x=\sum_{j, k=1}^{n} a_{j k} x_{j} x_{k} \geq 0, x^{T} B x=\sum_{j, k=1}^{n} b_{j k} x_{j} x_{k} \geq 0
+          $$
+          因为 $B$ 半正定, 所以存在 $T=r_{i j}$, 使得 $B=T^{T} T .$ 所以 $b_{j k}=\sum_{l=1}^{n} r_{l j} r_{l k}$, 所以
+          \begin{equation*}
+              x^{T} D x=\sum_{j, k=1}^{n} a_{j k} b_{j k} x_{j} x_{k}=\sum_{j, k=1}^{n} a_{j k}\left(\sum_{l=1}^{n} r_{l j} r_{l k}\right) x_{j} x_{k}=
+              \sum_{l=1}^{n} \sum_{j, k=1}^{n} a_{j k}\left(x_{j} r_{l j}\right)\left(x_{k} r_{l k}\right)
+          \end{equation*}
+          记 $y_{l}=\left(x_{1} r_{l 1}, \ldots, x_{n} r_{l n}\right)^{T}$, 则
+          $$
+              \sum_{j, k=1}^{n} a_{j k}\left(x_{j} r_{l j}\right)\left(x_{k} r_{l k}\right)=y_{l}^{T} A y_{l} \leq 0
+          $$
+          从而 $D$ 是半正定矩阵.
+\end{enumerate}
+\vspace{1ex}
+{\heiti 18.}设 $A \in M_{n}(C)$. 定义 $M_{n}(C)$ 上的线性变换 $\sigma, \tau$ 为 $\sigma(X)=A X, \tau(X)=$ $\boldsymbol{A} \boldsymbol{X}-\boldsymbol{X} \boldsymbol{A}$, 对任意的 $\boldsymbol{X} \in \boldsymbol{M}_{n}(\boldsymbol{C})$
+
+(1) 设 $\mathrm{A}$ 的秩为 $r$, 求 $\operatorname{dim}$ ker $\sigma$
+
+(2) 若 $B \in M_{n}(C)$, 满足 $\tau(B)=B .$ 证明 :$B$ 的特征值都是零，且矩阵 $A$ 与
+$B$ 至少有一个公共的特征向量.
+\begin{enumerate}[\qquad 证明：]
+    \item (1) 解 \\
+          $\operatorname{ker}(\sigma)=\left\{X \mid \sigma(X)=0, x \in M_{n}(C)\right\} .$ 记 $V=\left\{x \mid A x=0, x \in C^{n}\right\} .$ 则对
+          任意的 $X \in \operatorname{ker}(\sigma)$, 记 $X=\left(\alpha_{1}, \ldots, \alpha_{n}\right)$, 由于 $A X=0 \Rightarrow A \alpha_{i}=0$, 从而
+          $\alpha_{i} \in V$. 因为 $r(A)=r$, 所以 $\operatorname{dim}(\boldsymbol{V})=n-r .$ 假设 $V$ 的一组基是 $\eta_{1}, \ldots, \eta_{n-r}$,
+          那么所有的满足 $\boldsymbol{X} \in \operatorname{ker}(\sigma)$ 的 $\boldsymbol{X}$, 它的每个列向量必然是 $\eta_{1}, \ldots, \eta_{n-r}$ 的
+          线性组合. 令 $E_{11}=\left(\eta_{1}, 0, \ldots, 0\right), E_{12}=\left(0, \eta_{1}, 0, \ldots, 0\right), \ldots, E_{n-r, n}=$
+          $\left(0,0, \ldots, \eta_{n-r}\right)$, 容易证明它是 $\operatorname{ker}(\sigma)$ 的一组基, 从而 $\operatorname{dim}(\operatorname{ker}(\sigma))=n(n-r) .$
+          (2) 记 $B$ 的不为 0 的互不相同的特征值是 $\lambda_{1}, \lambda_{2}, \ldots, \lambda_{s}$, 相应的重数是 $k_{1}, \ldots, k_{s} $ . \\
+          则
+          $$
+              \operatorname{tr} B=\operatorname{tr}(A B-B A)=k_{1} \lambda_{1}+\cdots+k_{s} \lambda_{s}=0
+          $$
+          因为 $B^{2}=B(A B-B A)=B A B-B^{2} A=(B A) B-B(B A)$, 所以
+          $$
+              \operatorname{tr}\left(B^{2}\right)=\operatorname{tr}\left(B A B-B^{2} A\right)=k_{1} \lambda_{1}^{2}+\cdots+k_{s} \lambda_{s}^{2}=0
+          $$
+          类似的,
+          $$
+              \operatorname{tr}\left(B^{s}\right)=k_{1} \lambda_{1}^{s}+\cdots+k_{s} \lambda_{s}^{s}=0
+          $$
+          所以
+          $$
+              \left[\begin{array}{cccc}
+                      \lambda_{1}     & \lambda_{2}     & \ldots & \lambda_{s}     \\
+                      \vdots          & \vdots          & \ddots & \vdots          \\
+                      \lambda_{1}^{s} & \lambda_{2}^{s} & \ldots & \lambda_{s}^{s}
+                  \end{array}\right]\left[\begin{array}{c}
+                      k_{1}  \\
+                      k_{2}  \\
+                      \vdots \\
+                      k_{n}
+                  \end{array}\right]=\left[\begin{array}{c}
+                      0      \\
+                      0      \\
+                      \vdots \\
+                  \end{array}\right]
+          $$
+          有非零解. 但是 $\left|\begin{array}{cccc}\lambda_{1} & \lambda_{2} & \ldots & \lambda_{s} \\ \vdots & \vdots & \ddots & \vdots \\ \lambda_{1}^{s} & \lambda_{2}^{s} & \ldots & \lambda_{s}^{s}\end{array}\right|=\lambda_{1} \lambda_{2} \ldots \lambda_{s}\left|\begin{array}{cccc}1 & 1 & \ldots & 1 \\ \lambda_{1} & \lambda_{2} & \ldots & \lambda_{s} \\ \vdots & \vdots & \ddots & \vdots \\ \lambda_{1}^{s-1} & \lambda_{2}^{s-1} & \ldots & \lambda_{s}^{s-1}\end{array}\right|$ \\
+          因为 $\lambda_{i}$ 是互不相同的, 所以上面的行列式不等于 0, 从而线性方程组只有 0 解, 矛 盾了. 所以 $B$ 不存在不等于 0 的特征值. 从而 $B$ 的特征值全部是 $0 $. \\
+          (2) 证明 \\
+          设 $A \alpha=\lambda \alpha$, 其中 $\alpha \neq 0$ 是 $A$ 的特征向量, 因为 $A B=B+B A$, 所以 $A B \alpha=B \alpha+B A \alpha=(\lambda+1) B \alpha$, 如果 $B \alpha=0$, 那么 $\alpha$ 是 $A, B$ 的公共特征
+          向量, 如果 $B \alpha \neq 0$, 那么 $\lambda+1$ 是 $A$ 的一个特征值, 而 $B \alpha$ 是 $A$ 的一个特征向
+          量; 进一步地
+          $$
+              A B^{2} \alpha=+B A B \alpha=(\lambda+2) B^{2} \alpha
+          $$
+          如果 $B^{2} \alpha=0$ 那么 $B \alpha$ 是 $A, B$ 的公共特征向量, 如果 $B \alpha \neq 0$, 那么 $\lambda+2$ 是 $A$ 的一个特征值, 而 $B^{2} \alpha$ 是 $A$ 的一个特征向量; \\
+          如此下去, 必然存在 $B^{k} \alpha=0$ 而 $B^{k-1} \alpha \neq 0$ 是 $A, B$ 的公共特征向量. 这是因 为，若 $B^{k} \alpha \neq 0$, 那么 $\lambda+k$ 都是 $A$ 的特征值, 这是不可能的.
+\end{enumerate}
+
+\vspace{1ex}
+{\heiti 19.} 计算行列式
+$$
+    \left|\begin{array}{cccc}
+        1 & 1 & 1 & 1  \\
+        2 & 1 & 1 & -3 \\
+        1 & 2 & 2 & 5  \\
+        4 & 3 & 2 & 1
+    \end{array}\right|
+$$
+
+解答. 直接计算可得
+$$
+    \left|\begin{array}{cccc}
+        1 & 1 & 1 & 1  \\
+        2 & 1 & 1 & -3 \\
+        1 & 2 & 2 & 5  \\
+        4 & 3 & 2 & 1
+    \end{array}\right|=\left|\begin{array}{cccc}
+        1 & 1  & 1  & 1  \\
+        0 & -1 & -1 & -5 \\
+        0 & 1  & 1  & 4  \\
+        0 & -1 & -2 & -3
+    \end{array}\right|=\left|\begin{array}{cccc}
+        1 & 1  & 1  & 1  \\
+        0 & -1 & -1 & -5 \\
+        0 & 0  & 0  & -1 \\
+        0 & 0  & -1 & 2
+    \end{array}\right|=-\left|\begin{array}{cccc}
+        1 & 1  & 1  & 1  \\
+        0 & -1 & -1 & -5 \\
+        0 & 0  & -1 & 2  \\
+        0 & 0  & 0  & -1
+    \end{array}\right|=1
+$$
+
+\vspace{1ex}
+{\heiti 20.}计算行列式
+$$
+    \left|\begin{array}{cccc}
+        x_{1}-m & x_{2}   & \cdots & x_{n}   \\
+        x_{1}   & x_{2}-m & \cdots & x_{n}   \\
+        \vdots  & \vdots  &        & \vdots  \\
+        x_{1}   & x_{2}   & \cdots & x_{n}-m
+    \end{array}\right|_{n \times n}
+$$
+
+解答. 由于
+现根据行列式的性质将上述行列式拆分为 $2^{n}$ 个行列式之和, 其中每个行列式的第 $i(i=1,2, \cdots, n)$
+
+行要么为 $\left(x_{i}, x_{i}, \cdots, x_{i}\right)$, 要么为 $(0, \cdots, 0,-m, 0, \cdots, 0)$, 将这 $2^{n}$ 个行列式分为如下三类:
+\begin{enumerate}[\qquad (i) ]
+    \item 至少有两行 $\left(\right.$ 设为 $i, j(i \neq j)$ 行)的元素分别取 $\left(x_{i}, x_{i}, \cdots, x_{i}\right),\left(x_{j}, x_{j}, \cdots, x_{j}\right)$, 由于每个行列式至么 有两行元素成比例, 所以此类行列式均为零, 其和自然也为零.
+    \item 有且仅有一行 $\left(\right.$ 设为第 $i(i=1,2, \cdots, n)$ 行)元素取的是 $\left(x_{i}, x_{i}, \cdots, x_{i}\right)$, 此类行列式共有 $n$ 个, 并且 根据第 $i$ 列展开, 可知
+          $$
+              \sum_{i = 1}^{n}\left|\begin{array}{llllllll}
+                  -m    &        &        &       &        &        &       \\
+                        & \ddots &        &       &        &        &       \\
+                        &        & -m     &       &        &        &       \\
+                  x_{i} & x_{i}  & \cdots & x_{i} & \cdots & x_{i}  & x_{i} \\
+                        &        &        &       & -m     &        &       \\
+                        &        &        &       &        & \ddots &       \\
+                        &        &        &       &        &        & -m
+              \end{array}\right|=\sum_{i=1}^{n}(-1)^{i+i} x_{i}
+              \left|\begin{array}{cccc}
+                  -m &    &        &    \\
+                     & -m &        &    \\
+                     &    & \ddots &    \\
+                     &    &        & -m
+              \end{array} \right| =(-m)^{n-1} \sum_{i=1}^{n} x_{i} .
+          $$
+          (iii) 每一行均取形如 $(0, \cdots, 0,-m, 0, \cdots, 0)$ 这样的元素, 此类行列式仅有一个, 即
+          $$
+              \left|\begin{array}{llll}
+                  -m &    &        &    \\
+                     & -m &        &    \\
+                     &    & \ddots &    \\
+                     &    &        & -m
+              \end{array}\right|=(-m)^{n}
+          $$
+          于是
+          $$
+              \left|\begin{array}{ccccc}
+                  x_{1}-m & x_{2}   & \cdots & x_{n}   \\
+                  x_{1}   & x_{2}-m & \cdots & x_{n}   \\
+                  \vdots  & \vdots  &        & \vdots  \\
+                  x_{1}   & x_{2}   & \cdots & x_{n}-m
+              \end{array}\right|_{n \times n}=(-m)^{n}+(-m)^{n-1} \sum_{i=1}^{n} x_{i}
+          $$
+\end{enumerate}
+
+\vspace{1ex}
+{\heiti 21.}证明高斯引理: 两个本原多项式的乘积还是本原多项式.
+
+解答. 设 $f(x)=a_{n} x^{n}+\cdots+a_{1} x+a_{0}$ 与 $g(x)=b_{m} x^{m}+\cdots+b_{1} x+b_{0}$ 为两个本原多项式, 其中 $a_{n} b_{m} \neq 0$,
+
+记
+$$
+    h(x)=f(x) g(x)=c_{m+n} x^{m+n}+\cdots+c_{1} x+c_{0}
+$$
+
+若 $h(x)$ 不是本原多项式, 则存在素数 $p$ 使得 $p \mid c_{i}(i=0,1, \cdots, m+n)$, 而由于 $f(x), g(x)$ 均为本原多项式.
+
+所以 $p$ 不可能整除所有的 $a_{i}(i=0,1, \cdots, n)$, 也不可能整除所有的 $b_{i}(i=0,1, \cdots, m)$, 不妨设
+$$
+    p\left|a_{0}, a_{1}, \cdots, a_{i-1}, p \nmid a_{i} ; p\right| b_{0}, b_{1}, \cdots, b_{j-1}, p \nmid b_{j}
+$$
+
+此时考虑 $c_{i+j}$, 由于
+$$
+    \begin{aligned}
+        c_{i+j}=a_{i} b_{j} & +a_{i+1} b_{j-1}+a_{i+2} b_{j-2}+\cdots \\
+                            & +a_{i-1} b_{j+1}+a_{i-2} b_{j+2}+\cdots
+    \end{aligned}
+$$
+
+由上述假设可知 $p \nmid a_{i} b_{j}$, 但 $p\left|a_{i+1} b_{j-1}+a_{i+2} b_{j-2}+\cdots, p\right| a_{i-1} b_{j+1}+a_{i-2} b_{j+2}+\cdots$, 于是 $p \nmid c_{i+j}$,
+
+这与原假设矛盾. 所以 $h(x)$ 一定是本原多项式
+
+\vspace{1ex}
+{\heiti 22.}设多项式 $f(x)=x^{3} \mathcal{F}(1+t) x^{2}+4 x+k, g(x)=x^{3}+t x^{2}+k$, 常数 $t$ 和 $k$ 为多少时, 最大公 因式 $(f(x), g(x))$ 是二次多项式?
+
+解答. 注意到 $f(x)$ 与 $g(x)$ 作带余除法可得
+$$
+    f(x)=g(x)+x^{2}+4 x
+$$
+
+所以由辗转相除法可知
+$$
+    (f(x), g(x))=(g(x), f(x)-g(x))=\left(g(x), x^{2}+4 x\right) .
+$$
+
+于是若 $(f(x), g(x))$ 是二次多项式, 则必为 $x^{2}+4 x=x(x+4)$, 即有 $x(x+4) \mid g(x)$, 从而
+$$
+    \left\{\begin{array}{l}
+        0=g(0)=k ; \\
+        0=g(-4)=(-4)^{3}+t(-4)^{2}+k
+    \end{array}\right.
+$$
+
+由此解得 $t=4, k=0$
+
+\vspace{1ex}
+{\heiti 23.}当常数 $a, b, c$ 满足什么条件时, 下列线性方程组有解? 并在有解的条件下求出全部解
+
+(用特解和相应齐次线性方程组的基础解系表示).
+$$
+    \left\{\begin{array}{l}
+        x_{1}+2 x_{2}+x_{3}-x_{4}+x_{5}-2 x_{6}+3 x_{7}=1    \\
+        2 x_{1}+4 x_{2}+3 x_{3}+5 x_{5}-3 x_{6}+7 x_{7}=a ;  \\
+        -3 x_{1}-6 x_{2}-2 x_{3}+5 x_{4}+8 x_{6}-7 x_{7}=b ; \\
+        -x_{1}-2 x_{2}+x_{3}+5 x_{4}+5 x_{5}+5 x_{6}=c
+    \end{array}\right.
+$$
+
+解答. 首先对方程组的增广矩阵进行初等行变换, 化为阶梯形:
+$$
+    \begin{array}{l}
+        \left(\begin{array}{cccccccc}
+                1  & 2  & 1  & -1 & 1 & -2 & 3  & 1 \\
+                2  & 4  & 3  & 0  & 5 & -3 & 7  & a \\
+                -3 & -6 & -2 & 5  & 0 & 8  & -7 & b \\
+                -1 & -2 & 1  & 5  & 5 & 5  & 0  & c
+            \end{array}\right) \rightarrow\left(\begin{array}{cccccccc}
+                1 & 2 & 1 & -1 & 1 & -2 & 3 & 1   \\
+                0 & 0 & 1 & 2  & 3 & 1  & 1 & a-2 \\
+                0 & 0 & 1 & 2  & 3 & 2  & 2 & b+3 \\
+                0 & 0 & 2 & 4  & 6 & 3  & 3 & c+1
+            \end{array}\right) \\
+        \rightarrow\left(\begin{array}{cccccccc}
+                1 & 2 & 1 & -1 & 1 & -2 & 3 & 1       \\
+                0 & 0 & 1 & 2  & 3 & 1  & 1 & a-2     \\
+                0 & 0 & 0 & 0  & 0 & 1  & 1 & b-a+5   \\
+                0 & 0 & 0 & 0  & 0 & 1  & 1 & c-2 a+5
+            \end{array}\right) \rightarrow\left(\begin{array}{cccccccc}
+                1 & 2 & 1 & -1 & 1 & -2 & 3 & 1     \\
+                0 & 0 & 1 & 2  & 3 & 1  & 1 & a-2   \\
+                0 & 0 & 0 & 0  & 0 & 1  & 1 & b-a+5 \\
+                0 & 0 & 0 & 0  & 0 & 0  & 0 & c-b-a
+            \end{array}\right) .
+    \end{array}
+$$
+
+由此可知 $c-b-a=0$ 时, 方程组有解. 并且由上述阶梯形可知
+$$
+    \eta_{1}=(-2,1,0,0,0,0,0)^{\prime}, \eta_{2}=(3,0,-2,1,0,0,0)^{\prime}, \eta_{3}=(2,0,-3,0,1,0,0)^{\prime}, \eta_{4}=(-5,0,0,0,0,-1,1)^{\prime}
+$$
+
+为方程组导出组的基础解系, 同时
+$$
+    X_{0}=(3 b-4 a+18,0,2 a-b-7,0,0, b-a+5,0)^{\prime}
+$$
+
+为方程组的一个特解, 所以方程组的通解为
+$$
+    X_{0}+k_{1} \eta_{1}+k_{2} \eta_{2}+k_{3} \eta_{3}+k_{4} \eta_{4} .
+$$
+
+其中 $k_{1}, k_{2}, k_{3}, k_{4}$ 为任意数.
+
+\vspace{1ex}
+{\heiti 24.}设矩阵 $A, B$ 分别是数域 $P$ 上的 $m \times n$ 和 $s \times n$ 矩阵, 证明: 线性方程组 $A X=0$ 与 $B X=0$ 同解的充分必要条件是存在矩阵 $T_{1}, T_{2}$, 使得 $A=T_{1} B, B=T_{2} A$.
+
+解答. 充分性. 已知存在矩阵 $T_{1}, T_{2}$, 使得 $A=T_{1} B, B=T_{2} A$, 那么当 $A X=0$ 时, 显然有 $B X=$ $T_{2} A X=0$, 同理, 当 $B X=0$ 时, 有 $A X=T_{1} B X=0$, 这说明方程组 $A X=0$ 与 $B X=0$ 同解.
+
+必要性. 已知方程组 $A X=0$ 与 $B X=0$ 店解, 则 $A X=0$ 时, 有 $A X=B X=0$, 反之, 若 $A X=B X=0$,显然也有$A X=0$,这说明方程组 $A X=0$ 止 $\left(\begin{array}{c}A \\ B\end{array}\right) X=0$ 同解, 进而 $r(A)=r\left(\begin{array}{l}A \\ B\end{array}\right) .$ 注意到 $A$ 的行向量均为$\left(\begin{array}{c}A \\ B\end{array}\right)$ 的行向量, 所以结合它们的秩相同可知 $A$ 行向量组的极大线性无关组也是 $\left(\begin{array}{c}A \\ B\end{array}\right)$ 行向量组 的极大线性无关组, 这说明 $B$ 的行向量作为 $\left(\begin{array}{c}A \\ B\end{array}\right)$ 的行向量均可以 $A$ 行向量组的极大线性无关组线性表 出, 即 $B$ 的行向量均可以由 $A$ 的行向量组线性表出, 所以存在矩阵 $T_{2}$ 使得 $B=T_{2} A$.
+
+同理, 根据已知可得 $B X=0$ 与 $\left(\begin{array}{c}A \\ B\end{array}\right) X=0$ 同解, 由此可知 $A$ 的行向量均可由 $B$ 的行向量组线性表 出, 即存在矩阵 $T_{1}$ 使得 $A=T_{1} B .$
+
+\vspace{1ex}
+{\heiti 25.}设矩阵 $A, D$ 分别为 $n$ 阶和 $m$ 阶可逆矩阵, $B, C$ 分别为 $n \times m$ 和 $m \times n$ 的矩阵. 证明:
+
+1. $\left|\begin{array}{ll}A & B \\ C & D\end{array}\right|=|A|\left|D-C A^{-1} B\right|$.
+
+2. $r\left(A-B D^{-1} C\right)-r\left(D-C A^{-1} B\right)=n-m$.
+
+解答. 1. 由于 $A$ 可逆, 所以
+$$
+    \left(\begin{array}{cc}
+            E_{n}     & O     \\
+            -C A^{-1} & E_{m}
+        \end{array}\right)\left(\begin{array}{ll}
+            A & B \\
+            C & D
+        \end{array}\right)=\left(\begin{array}{cc}
+            A & B            \\
+            O & D-C A^{-1} B
+        \end{array}\right) .
+$$
+
+上述矩阵等式两边取行列式可得
+$$
+    \left|\begin{array}{cc}
+        A & B \\
+        C & D
+    \end{array}\right|=|A|\left|D-C A^{-1} B\right|
+$$
+
+2. 由于 $A$ 可逆, 所以有
+$$
+    \left(\begin{array}{cc}
+            E_{n}     & O     \\
+            -C A^{-1} & E_{m}
+        \end{array}\right)\left(\begin{array}{cc}
+            A & B \\
+            C & D
+        \end{array}\right)\left(\begin{array}{cc}
+            E_{n} & -A^{-1} B \\
+            O     & E_{m}
+        \end{array}\right)=\left(\begin{array}{cc}
+            A & O            \\
+            O & D-C A^{-1} B
+        \end{array}\right) .
+$$
+
+于是
+\begin{equation}
+    \left(\begin{array}{cc}A & B \\ C & D\end{array}\right)=r\left(\begin{array}{cc}A & O \\ O & D-C A^{-1} B\end{array}\right)=r(A)+r\left(D-C A^{-1} B\right)=n+r\left(D-C A^{-1} B\right)
+    \tag{1}
+\end{equation}
+
+同时,又由于 $D$ 可逆, 所以有
+$$
+    r\left(\begin{array}{cc}
+            E_{n} & -B D^{-1} \\
+            O     & E_{m}
+        \end{array}\right)\left(\begin{array}{cc}
+            A & B \\
+            C & D
+        \end{array}\right)\left(\begin{array}{cc}
+            E_{n}     & O     \\
+            -D^{-1} C & E_{m}
+        \end{array}\right)=\left(\begin{array}{cc}
+            A-B D^{-1} C & O \\
+            O            & D
+        \end{array}\right) .
+$$
+
+于是
+\begin{equation}
+    r\left(\begin{array}{cc}
+            A & B \\
+            C & D
+        \end{array}\right)=r\left(\begin{array}{cc}
+            A-B D^{-1} C & O \\
+            O            & D
+        \end{array}\right)=r(D)+r\left(A-B D^{-1} C\right)=m+r\left(A-B D^{-1} C\right)
+    \tag{2}
+\end{equation}
+
+进而由 (1) 式与 (2) 式可知 $n+r\left(D-C A^{-1} B\right)=m+r\left(A-B D^{-1} C\right)$, 即
+$$
+    r\left(A-B D^{-1} C\right)-r\left(D-C A^{-1} B\right)=n-m .
+$$
+
+\vspace{1ex}
+{\heiti 26.}已知 $n$ 阶矩阵 $M_{n}=\left(\dfrac{1-a_{i}^{n} a_{j}^{n}}{1-a_{i} a_{j}}\right)$, 证明: 当 $a_{1}, a_{2}, \cdots, a_{n}$ 为互不相同的实数时, $M_{n}$ 为正 定矩阵.
+解答. 显然 $M_{n}$ 为实对称矩阵. 另外, 注意到
+$$
+    \dfrac{1-a_{i}^{n} a_{j}^{n}}{1-a_{i} a_{j}}=1+a_{i} a_{j}+a_{i}^{2} a_{j}^{2}+\ldots+a_{i}^{n-1} a_{j}^{n-1}
+$$
+
+于是
+\begin{equation*}
+    \begin{aligned}
+        M_{n} & =\left(\begin{array}{ccc}
+                1+a_{1} a_{1}+a_{1}^{2} a_{1}^{2}+\cdots+a_{1}^{n-1} a_{1}^{n-1} & \cdots & 1+a_{1} a_{n}+a_{1}^{2} a_{n}^{2}+\cdots+a_{1}^{n-1} a_{n}^{n-1} \\
+                \vdots                                                           &        & \vdots                                                           \\
+                1+a_{n} a_{1}+a_{n}^{2} a_{1}^{2}+\cdots+a_{n}^{n-1} a_{1}^{n-1} & \cdots & 1+a_{n} a_{n}+a_{n}^{2} a_{n}^{2}+\cdots+a_{n}^{n-1} a_{n}^{n-1}
+            \end{array}\right)                                                        \\
+              & =\left(\begin{array}{cccc}
+                1      & a_{1}  & \cdots & a_{1}^{n-1}      \\
+                1      & a_{2}  & \cdots & \Delta_{2}^{n-1} \\
+                \vdots & \vdots &        & \vdots           \\
+                1      & a_{n}  & \cdots & a_{n}^{n-1}
+            \end{array}\right)\left(\begin{array}{cccc}
+                1           & 1           & \cdots & 1           \\
+                a_{1}       & a_{2}       & \cdots & a_{n}       \\
+                \vdots      & \vdots      &        & \vdots      \\
+                a_{1}^{n-1} & a_{2}^{n-1} &        & a_{n}^{n-1}
+            \end{array}\right)=C^{\prime} C .
+    \end{aligned}
+\end{equation*}
+
+其中
+$$
+    C=\left(\begin{array}{cccc}
+            1           & 1           & \cdots & 1           \\
+            a_{1}       & a_{2}       & \cdots & a_{n}       \\
+            \vdots      & \vdots      &        & \vdots      \\
+            a_{1}^{n-1} & a_{2}^{n-1} &        & a_{n}^{n-1}
+        \end{array}\right)
+$$
+
+由范德蒙行列式的性质可知
+$$
+    |C|=\prod_{1 \leq i<j \leq n}\left(a_{j}-a_{i}\right) \neq 0 .
+$$
+
+所以 $C$ 为可逆实矩阵. 于是对任意的 $X \in \mathbb{R}^{n}$, 总有
+$$
+    X^{\prime} M_{n} X=X^{\prime} C^{\prime} C X=(C X)^{\prime}(C X) \geq 0 .
+$$
+
+并且当 $X^{\prime} M_{n} X=(C X)^{\prime}(C X)=0$ 时, 有 $C X=0$, 再结合 $C$ 可逆知 $X=0 .$ 这说明 $M_{n}$ 为正定矩阵.
+
+\vspace{1ex}
+{\heiti 27.}设 $\alpha$ 为实线性空间 $\mathbb{R}^{3}$ 上的线性变换， $\mathscr{E}$ 为恒等变换， $\propto$ 的特征多项式为 $\lambda^{3}-1$, 令 $V_{1}=\{\alpha \mid(\mathscr{\alpha}-\mathscr{\delta}) \alpha=0\}, V_{2}=\left\{\alpha \mid\left(\mathscr{\alpha}^{2}+\mathscr{A}+8\right) \alpha=0\right\} .$ 证明:
+
+1. $V_{1}$ 和 $V_{2}$ 都是 $\propto$ 的不变子空间.
+
+2. $\mathbb{R}^{3}=V_{1} \oplus V_{2}$
+
+解答. $1 .$ 若 $\alpha \in V_{1}$, 则有 $(\mathscr{A}-\mathscr{E}) \alpha=0$, 于是
+$$
+    (\alpha-\mathscr{}) \mathscr{A} \alpha=\mathscr{A}(\mathscr{A}-\mathscr{E}) \alpha=0 .
+$$
+
+这说明 $\mathscr{A} \alpha \in V_{1}$, 即 $V_{1}$ 为 $\mathscr{A} \mathscr{\text { 的不变子空间. }}$
+
+同理, 若 $\alpha \in V_{2}$, 则有 $\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha=0$, 于是
+\begin{equation*}
+    \left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right)\mathscr{A} \alpha=\mathscr{A}\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha=0
+\end{equation*}
+
+这说明 $\mathscr{A} \alpha \in V_{2}$, 即 $V_{2}$ 也为 $\mathscr{A}$ 的不变子空间.
+
+2. 由于 $\lambda^{3}-1=(\lambda-1)\left(\lambda^{2}+\lambda+1\right)$, 并且根据 $\lambda^{2}+\lambda+1$ 不以 1 为根可知 $\left(\lambda-1, \lambda^{2}+\lambda+1\right)=1$, 即存
+在 $u(\lambda), v(\lambda) \in \mathbb{R}[x]$, 使得
+$$
+    u(\lambda)(\lambda-1)+v(\lambda)\left(\lambda^{2}+\lambda+1\right)=1
+$$
+
+进而
+$$
+    u(\mathscr{A})(\mathscr{A}-\mathscr{S})+v(\mathscr{A})\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right)=\mathcal{E} .
+$$
+
+所以对任意的 $\alpha \in \mathbb{R}^{3}$, 均有
+\begin{equation}
+    \alpha=u(\mathscr{A})(\mathscr{A}-\mathscr{E}) \alpha+v(\mathscr{A})\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha=\alpha_{1}+\alpha_{2}
+    \tag{3}
+\end{equation}
+
+其中 $\alpha_{1}=u(\mathscr{A})(\mathscr{A}-\mathscr{S}) \alpha, \alpha_{2}=v(\mathscr{A})\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha .$
+
+由于 $\lambda^{3}-1$ 为 $d$ 的特征多项式, 所以 $\alpha^{3}-\mathscr{E}=\mathscr{O}$, 于是
+\begin{gather*}
+    \left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right)\alpha_1=u(\mathscr{A})(\mathscr{A}-\mathscr{E})(\mathscr{A})\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha=u(\mathscr{A})(\mathscr{A}^3-\mathscr{E})\alpha=0 \\
+    \left(\mathscr{A}-\mathscr{E}\right)\alpha_2=v(\mathscr{A})(\mathscr{A}-\mathscr{E})(\mathscr{A})\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha=u(\mathscr{A})(\mathscr{A}^3-\mathscr{E})\alpha=0
+\end{gather*}
+
+这说明 $\alpha_{1} \in V_{2}, \alpha_{2} \in V_{1}$, 从而结合 $V_{1}, V_{2}$ 为 $\mathbb{R}^{3}$ 的线性子空伯可知
+$$\mathbb{R}^{3}=V_{1}+V_{2}$$
+
+另外, 对任意的 $\alpha \in V_{1} \cap V_{2}$, 则有 $(\propto-8) \alpha=\left(d^{2}+\mathscr{A}+\delta\right) \alpha=0$, 从而代入到(3) 式可知
+\begin{equation*}
+    \alpha=u(\mathscr{A})(\mathscr{A}-\mathscr{E}) \alpha+v(\mathscr{A})\left(\mathscr{A}^{2}+\mathscr{A}+\mathscr{E}\right) \alpha=0
+\end{equation*}
+
+即 $V_{1} \cap V_{2}=\{0\}$, 进而
+$$
+    \mathbb{R}^{3}=V_{1} \oplus V_{2}
+$$
+
+\vspace{1ex}
+{\heiti 28.}设 $A, B$ 都是 $n$ 阶实对称矩阵, 证明: 存在正交矩阵 $U$, 使得 $U^{-1} A U$ 和 $U^{-1} B U$ 同时为对角 矩阵的充分必要条件是 $A B=B A$.
+
+解答. 必要性. 若存在正交矩阵 $U$, 使得 $U^{-1} A U$ 和 $U^{-1} B U$ 同时为对角矩阵. 则有
+$$U^{-1} A U U^{-1} B U=U^{-1} B U U^{-1} A U$$
+
+于是 $A B=B A$.
+
+充分性. 已知 $n$ 阶实对称矩阵 $A, B$ 满足 $A B=B A$, 首先存在正交矩阵 $P$ 使得
+$$
+    P^{-1} A P=\left(\begin{array}{cccc}
+            \lambda_{1} E_{r_{1}} &                       &        &                       \\
+                                  & \lambda_{2} E_{r_{2}} &        &                       \\
+                                  &                       & \ddots &                       \\
+                                  &                       &        & \lambda_{s} E_{r_{r}}
+        \end{array}\right) .
+$$
+
+其中 $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{s}$ 是 $A$ 的所有互异特征值, $E_{r_{1}}, E_{r_{2}}, \cdots, E_{r}$, 分别是 $r_{1}, r_{2}, \cdots, r_{s}$ 级单位矩阵. 由 $A B=B A$
+
+可得
+$$P^{-1} A P P^{-1} B P=P^{-1} B P P^{-1} A P$$
+
+现在记 $P^{-1} B P=\left(B_{i j}\right)$, 其中 $B_{i j}$ 为 $r_{i} \times r_{j}$ 阶矩阵, 代入到上式可知
+$$
+    \lambda_{i} B_{i j}=\lambda_{j} B_{i j}
+$$
+
+于是当 $i \neq j$ 时, 有 $B_{i j}=O$, 即
+$$
+    P^{-1} B P=\left(\begin{array}{cccc}
+            B_{11} &        &        &         \\
+                   & B_{22} &        &         \\
+                   &        & \ddots &         \\
+                   &        &        & B_{s s}
+        \end{array}\right) .
+$$
+
+由于 $B$ 为实对称矩阵, 所以 $B_{11}, B_{22}, \cdots, B_{s s}$ 均为实对称矩阵, 于是对任意的 $i=1,2, \cdots, s$, 存在 $r_{i}$ 阶正交 矩阵 $Q_{i}$ 使得 $Q_{i}^{-1} B_{i i} Q_{i}$ 为对角矩阵, 取 $Q=\operatorname{diag}\left\{Q_{1}, Q_{2}, \cdots, Q_{s}\right\}$, 则 $Q$ 为 $n$ 阶正交矩阵, 且
+$$
+    Q^{-1} P^{-1} B P Q=\left(\begin{array}{llll}
+            Q_{1}^{-1} B_{11} Q_{1} &                         &        &                          \\
+                                    & Q_{2}^{-1} B_{22} Q_{2} &        &                          \\
+                                    &                         & \ddots &                          \\
+                                    &                         &        & Q_{s}^{-1} B_{s s} Q_{s}
+        \end{array}\right)
+$$
+
+为对角矩阵. 同时
+$$
+    \begin{aligned}
+        Q^{-1} P^{-1} A P Q & =\left(\begin{array}{cccc}
+                Q_{1}^{-1}\left(\lambda_{1} E_{r_{1}}\right) Q_{1} &                                                    &        &                                                    \\
+                                                                   & Q_{2}^{-1}\left(\lambda_{2} E_{r_{2}}\right) Q_{2} &        &                                                    \\
+                                                                   &                                                    & \ddots &                                                    \\
+                                                                   &                                                    &        & Q_{S}^{-1}\left(\lambda_{s} E_{r_{s}}\right) Q_{2}
+            \end{array}\right) \\
+                            & =\left(\begin{array}{cccc}
+                \lambda_{1} E_{r_{1}} &                       &        &                       \\
+                                      & \lambda_{2} E_{r_{2}} &        &                       \\
+                                      &                       & \ddots &                       \\
+                                      &                       &        & \lambda_{s} E_{r_{0}}
+            \end{array}\right)
+    \end{aligned}
+$$
+
+仍为对角矩阵. 所以取 $U=P Q$ 就有 $U^{-1} A U, U^{-1} B U$ 同时为对角矩阵, 并且 $U$ 也为正交矩阵.
+
+\vspace{1ex}
+{\heiti 29.}若 $A$ 为 $n \times n$ 的半正定矩阵, $B$ 为 $n \times n$ 的实矩阵. 若存在正整数 $s$, 使得 $A^{s} B=B A^{s}$, 证明: $A B=B A .$
+由 $A$ 半正定知存在正交阵 $P$ 使得
+$$
+    P^{\mathrm{T}} A P=\Lambda=\operatorname{diag}\left(\lambda_{1} E_{n_{1}}, \cdots, \lambda_{t} E_{n_{t}}\right), \lambda_{i} \geq 0 \text { 互异 }
+$$
+
+于是
+$$
+    \begin{aligned}
+        A^{s} B=B A^{s} \Rightarrow & P^{\mathrm{T}} A^{s} P \cdot P^{\mathrm{T}} B P=P^{\mathrm{T}} B P \cdot P^{\mathrm{T}} A^{s} P                                                                                                               \\
+        \Rightarrow                 & \operatorname{diag}\left(\lambda_{1}^{s} E_{n_{1}}, \cdots, \lambda_{t}^{s} E_{n_{t}}\right) \tilde{B}=\tilde{B} \operatorname{diag}\left(\lambda_{1}^{s} E_{n_{1}}, \cdots, \lambda_{t}^{s} E_{n_{t}}\right) \\
+                                    & \left(\tilde{B}=P^{\mathrm{T}} B P=\left(\tilde{B}_{i j}\right), \text { 分块如 } \Lambda\right)                                                                                                              \\
+        \Rightarrow                 & \lambda_{i}^{s} \tilde{B}_{i j}=\tilde{B}_{i j} \lambda_{j}^{s} \Rightarrow \forall i \neq j, \tilde{B}_{i j}=0                                                                                               \\
+        \Rightarrow                 & \tilde{B}=\operatorname{diag}\left(\tilde{B}_{11}, \cdots, \tilde{B}_{t t}\right)                                                                                                                             \\
+        \Rightarrow                 & \operatorname{diag}\left(\lambda_{1} E_{n_{1}}, \cdots, \lambda_{t} E_{n_{t}}\right) \tilde{B}=\tilde{B} \operatorname{diag}\left(\lambda_{1} E_{n_{1}}, \cdots, \lambda_{t} E_{n_{t}}\right)                 \\
+        \Rightarrow                 & P \operatorname{diag}\left(\lambda_{1} E_{n_{1}}, \cdots, \lambda_{t} E_{n_{t}}\right) P^{T} \cdot P \tilde{B} P^{\mathrm{T}}                                                                                 \\
+                                    & =P \tilde{B} P^{\mathrm{T}} \cdot P \operatorname{diag}\left(\lambda_{1} E_{n_{1}}, \cdots, \lambda_{t} E_{n_{t}}\right) P^{\mathrm{T}}                                                                       \\
+        \Rightarrow                 & A B=B A .
+    \end{aligned}
+$$
+
+\vspace{1ex}
+{\heiti 30.}已知复数域上的两个 $n$ 阶矩阵
+$$
+    A=\left(\begin{array}{ccccc}
+            0 & 1 &        &        &   \\
+              & 0 & 1      &        &   \\
+              &   & \ddots & \ddots &   \\
+              &   &        & 0      & 1 \\
+            1 &   &        &        & 0
+        \end{array}\right), B=\operatorname{diag}\left(\xi_{1}, \xi_{2}, \cdots, \xi_{n}\right)
+$$
+
+其中 $\xi_{i}(i=1,2, \cdots, n)$ 为全部 $n$ 次单位根, 证明: $A$ 与 $B$ 相似.
+$$
+    \begin{aligned}
+        |\lambda E-A|= & \left|\begin{array}{ccccc}
+            \lambda & -1      &        &         &    \\
+                    & \lambda & -1     &         &    \\
+                    &         & \ddots & \ddots  &    \\
+                    &         &        & \lambda & -1
+        \end{array}\right|                                \\
+        =              & \lambda \cdot    \lambda^{n-1} + (-1)^{n+1} \cdot (-1) \cdot (-1)^{n-1} \\
+        =              & \lambda^{n}-1=\prod_{k=1}^{n}\left(\lambda-\xi_{k}\right)
+    \end{aligned}
+$$
+
+知 $A$ 有 $n$ 个互异特征值, 而有 $n$ 个线性无关的特征向量, 故 $A$ 可可对角 化, 即存在正交阵 $P$, 使得 $P^{\mathrm{T}} A P=B .$
+
+\vspace{1ex}
+{\heiti 31.}设 $V_{1}, V_{2}$ 是有限维欧氏空间 $V$ 的子空间, 且 $\operatorname{dim} V_{1}<\operatorname{dim} V_{2}$, 证明:$V_{2}$ 中必有非零向量垂直与 $V_{1}$ 中的一切向量.
+$$
+    \begin{aligned}
+        \operatorname{dim}\left(V_{2} \cap V_{1}^{\perp}\right) & =\operatorname{dim} V_{2}+\operatorname{dim} V_{1}^{\perp}-\operatorname{dim}\left(V_{2} \cap V_{1}^{\perp}\right)                     \\
+                                                                & =\operatorname{dim} V_{2}+\left(n-\operatorname{dim} V_{1}\right)-\operatorname{dim}\left(V_{2} \cap V_{1}^{\perp}\right)              \\
+                                                                & =\left(\operatorname{dim} V_{2}-\operatorname{dim} V_{1}\right)+\left[n-\operatorname{dim}\left(V_{2} \cap V_{1}^{\perp}\right)\right] \\
+                                                                & \geq \operatorname{dim} V_{2}-\operatorname{dim} V_{1}>0
+    \end{aligned}
+$$
+
+知 $\exists 0 \neq \alpha \in V_{2} \cap V_{1}^{\perp} .$ 此 $\alpha$ 即满足题意.
+
+\vspace{1ex}
+{\heiti 32.}设矩阵 $A=\left(\begin{array}{lll}2 & 1 & 0 \\ 1 & 2 & 0 \\ 1 & a & b\end{array}\right)$ 仅有两个不同的特征值. 若 $A$ 相似于对角矩阵，求 $a, b$ 的值，并求可
+逆矩阵 $P$, 使 $P^{-1} A P$ 为对角矩阵.
+
+解: 由 $|\lambda E-A|=\left|\begin{array}{ccc}\lambda-2 & -1 & 0 \\ -1 & \lambda-2 & 0 \\ -1 & -a & \lambda-b\end{array}\right|=(\lambda-b)(\lambda-3)(\lambda-1)=0$
+
+当 $b=3$ 时，由 $A$ 相似对角化可知，二重根所对应特征值至少存在两个线性无关的特征向量，
+
+则$(3 E-A)=\left(\begin{array}{ccc}1 & -1 & 0 \\ -1 & 1 & 0 \\ -1 & -a & 0\end{array}\right)$ 知, $\quad a=-1$
+
+此时,$\lambda_{1}=\lambda_{2}=3$ 所对应特征向量为 $\alpha_{1}=\left(\begin{array}{l}1 \\ 1 \\ 0\end{array}\right), \alpha_{2}=\left(\begin{array}{l}0 \\ 0 \\ 1\end{array}\right)$,
+
+$\lambda_{3}=1$ 所对应的特征向量为 $\alpha_{3}=\left(\begin{array}{c}-1 \\ 1 \\ 1\end{array}\right)$, 则 $P^{-1} A P=\left(\begin{array}{lll}3 & & \\ & 3 & \\ & & 1\end{array}\right)$
+
+当 $b=1$ 时，由 $A$ 相似对角化可知，二重根所对应特征值至少存在两个线性无关的特征向量，
+
+则 $(E-A)=\left(\begin{array}{rrr}-1 & -1 & 0 \\ -1 & -1 & 0 \\ -1 & -a & 0\end{array}\right)$, 知 $a=1$,
+
+此时, $\lambda_{1}=\lambda_{2}=1$ 所对应特征向量为 $\beta_{1}=\left(\begin{array}{c}-1 \\ 1 \\ 0\end{array}\right), \beta_{2}=\left(\begin{array}{l}0 \\ 0 \\ 1\end{array}\right)$,
+
+$\lambda_{3}=3$ 所对应的特征向量为 $\alpha_{3}=\left(\begin{array}{l}1 \\ 1 \\ 1\end{array}\right)$, 则 $P^{-1} A P=\left(\begin{array}{lll}1 & & \\ & 1 & \\ & & 3\end{array}\right)$
+
+\vspace{1ex}
+{\heiti 33.}曲线$\left(x^{2}+y^{2}\right)^{2}=x^{2}-y^{2}(x \geq 0, y \geq 0) $与  $x $ 轴围成的区域为 $D$, 求$ \iint_{D} x y dxdy $
+
+解: $$
+    \begin{aligned}
+        \iint_{D} x y d x d y & =\int_{0}^{-\frac{\pi}{4}} d \theta \int_{0}^{\sqrt{\cos 2 \theta}} r^{3} \sin \theta \cos \theta d r \\
+                              & =\int_{0}^{\frac{\pi}{4}} \dfrac{1}{4} \cos ^{2} 2 \theta \sin \theta \cos \theta d \theta            \\
+                              & =-\int_{0}^{\frac{\pi}{4}} \dfrac{1}{16} \cos ^{2} 2 \theta d \cos 2 \theta                           \\
+                              & =-\left.\dfrac{1}{48} \cos ^{3} 2 \theta\right|_{0} ^{\frac{\pi}{4}}=\dfrac{1}{48} .
+    \end{aligned}
+$$
+
+\vspace{1ex}
+{\heiti 33.}函数 $y=y(x)$ 的微分方程 $x y^{\prime}-6 y=-6$, 满足 $y(\sqrt{3})=10$,
+
+(1)求 $y(x)$;
+
+(2) $P$ 为曲线 $y=y(x)$ 上的一点，曲线 $y=y(x)$ 在点 $P$ 的法线在 $y$ 轴上的截距为 $I_{y}$, 为使 $I_{y}$ 最小，求 $P$ 的坐标.
+
+解:(1) $y^{\prime}-\dfrac{6}{x} y=-\dfrac{6}{x}, \therefore y=e^{\int \frac{6}{x} x}\left[\int\left(-\frac{6}{x}\right) e^{-\int_{x}^{6} d x} d x+C\right]=x^{6}\left(\dfrac{1}{x^{6}}+C\right)=1+C x^{6}$
+
+将 $y(\sqrt{3})=10$ 代入, $C=\dfrac{1}{3}, \quad \therefore y(x)=1+\dfrac{x^{6}}{3}$.
+
+(2)设 $P(x, y)$, 则过 $P$ 点的切线方程为 $Y-y=2 x^{5}(X-x)$,
+
+法线方程为 $Y-y=-\dfrac{1}{2 x^{5}}(X-x)$,
+
+令 $X=0, \quad \therefore Y=I_{y}=1+\dfrac{x^{6}}{3}+\dfrac{1}{2 x^{4}}$, 偶函数，为此仅考虑 $(0,+\infty)$
+
+令 $\left(I_{y}\right)^{\prime}=2 x^{5}-\dfrac{2}{x^{5}}=0, \quad x=1$
+
+$\therefore x \in(0,1),\left(I_{y}\right)^{\prime}<0, I_{y}>I_{y}(1)=\dfrac{11}{6} ; \quad x \in(1,+\infty),\left(I_{y}\right)>0, \quad I_{y}>I_{y}(1)=\dfrac{11}{6}$
+
+$\therefore P\left(\pm 1, \dfrac{4}{3}\right)$ 时， $I_{y}$ 有最小值 $\dfrac{11}{6} .$
+
+\vspace{1ex}
+{\heiti 34.}$f(x)$满足$\int \dfrac{f(x)}{\sqrt{x}} d x=\dfrac{1}{6} x^{2}-x+C$, $L$ 为曲线$y=f(x)(4 \leq x \leq 9)$, $L$的弧长为s, $L$绕 $x$ 轴旋转一周所形成的曲面的面积为$A$ ,求$s$和$A$.
+
+解:$\dfrac{f(x)}{\sqrt{x}}=\dfrac{1}{3} x-1, \quad f(x)=\dfrac{1}{3} x^{\dfrac{3}{2}}-x^{\dfrac{1}{2}}$
+
+曲线的弧长 $ s=\int_{4}^{9} \sqrt{1+y^{\prime 2}} d x=\int_{4}^{9} \sqrt{\dfrac{1}{2}+\dfrac{x}{4}+\dfrac{1}{4 x}} d x=\dfrac{22}{3}.$
+
+曲面的侧面积$A=2 \pi \int_{4}^{9} y \sqrt{1+y^{\prime 2}} d x=2 \pi \int_{4}^{9}\left(\dfrac{1}{3} x^{\frac{3}{2}}-x^{\frac{1}{2}}\right) \sqrt{x+\dfrac{1}{x}+2} d x =\dfrac{425 \pi}{9}$
+
+\vspace{1ex}
+{\heiti 35.}求极限$\lim _{x \rightarrow 0}\left(\dfrac{1+\int_{0}^{x} e^{t^{2}} d t}{e^{x}-1}-\dfrac{1}{\sin x}\right)$
+
+解: $\lim _{x \rightarrow 0}\left(\dfrac{1+\int_{0}^{x} e^{t^{2}} d t}{e^{x}-1}-\dfrac{1}{\sin x}\right)=\lim _{x \rightarrow 0} \dfrac{\sin x-1-\int_{0}^{x} e^{t^{2}} d t}{\left(e^{x}-1\right) \sin x} $
+
+又因为$\int_{0}^{x} e^{t^{2}} d t=\int_{0}^{x}\left(1+t^{2}+o\left(t^{2}\right)\right) d t=x+\dfrac{1}{3} x^{3}+o\left(x^{3}\right),$故
+
+原式=$\lim _{x \rightarrow 0} \dfrac{\left(x-\dfrac{1}{3 !} x^{3}+o\left(x^{3}\right)\right)\left(1+x+\dfrac{1}{3 !} x^{3}+o\left(x^{3}\right)\right)-x-\dfrac{1}{2} x^{2}+o\left(x^{2}\right)}{x^{2}}$
+
+$\qquad =\lim _{x \rightarrow 0} \dfrac{\dfrac{1}{2} x^{2}+o\left(x^{2}\right)}{x^{2}}=\dfrac{1}{2} $
+
+\vspace{1ex}
+{\heiti 36.}在区间 $(0,2)$ 上随机取一点，将该区间分成两段，较短的一段长度记为 $X$,较长的一段长度记为 $Y$,令 $Z=\dfrac{Y}{X}$.
+
+(1)求 $X$ 的概率密度;
+
+(2)求 $Z$ 的概率密度.
+
+(3)求 $E\left(\frac{X}{Y}\right)$.
+
+解:
+
+(1)由题知: $\quad X \sim f(x)=\left\{\begin{array}{c}1,0<x<1 \\ 0, \text { 其他 }\end{array}\right.$;
+
+(2)由 $Y=2-X$, 即 $Z=\frac{2-X}{X}$, 先求 $Z$ 的分布函数:
+$F_{Z}(z)=P\{Z \leq z\}=P\left\{\frac{2-X}{X} \leq z\right\}=P\left\{\frac{2}{X}-1 \leq z\right\}$
+
+当 $z<1$ 时, $F_{Z}(z)=0$;
+
+当 $z \geq 1$ 时, $F_{Z}(z)=P\left\{\frac{2}{X}-1 \leq z\right\}=1-P\left\{X \leq \frac{2}{z+1}\right\}=1-\int_{0}^{\frac{2}{z+1}} 1 d x=1-\frac{2}{z+1} ;$
+
+$f_{Z}(z)=\left(F_{z}(z)\right)^{\prime}=\left\{\begin{array}{c}\frac{2}{(z+1)^{2}}, z \geq 1 \\ 0, \text { 其他 }\end{array} ;\right.$
+
+(3) $E\left(\frac{X}{Y}\right)=E\left(\frac{X}{2-X}\right)=\int_{0}^{1} \frac{x}{2-x} \cdot 1 d x=-1+2 \ln 2$.
+
+\vspace{1ex}
+{\heiti 37.}已知曲线 $C:\left\{\begin{array}{l}x^{2}+2 y^{2}-z=6 \\ 4 x+2 y+z=30\end{array}\right.$, 求 $C$ 上的点到 $x o y$ 坐标面距离的最大值.
+
+解: 设拉格朗日函数 $L(x, y, z, \lambda, \mu)=z^{2}+\lambda\left(x^{2}+2 y^{2}-z-6\right)+\mu(4 x+2 y+z-30)$
+$$
+    \begin{array}{l}
+        L_{x}^{\prime}=2 x \lambda+4 u=0 \\
+        L^{\prime} y=4 y \lambda+2 u=0   \\
+        L_{z}^{\prime}=2 z-\lambda+u=0   \\
+        x^{2}+2 y^{2}-z=6                \\
+        4 x+2 y+z=30
+    \end{array}
+$$
+
+解得驻点: $(4,1,12),(-8,-2,66)$
+
+C上的点 $(-8,-2,66)$ 到 xoy 面距离最大为 $66$.
+
+\vspace{1ex}
+{\heiti 37.}设 $u_{n}(x)=e^{-n x}+\frac{1}{n(n+1)} x^{n+1}(n=1,2, \ldots), \text { 求级数 } \sum_{n=1}^{\infty} u_{n}(x) $ 的收敛域及和函数.
+
+解:
+
+$\begin{array}{l}
+        S(x)=\sum_{n=1}^{\infty} u_{n}(x)=\sum_{n=1}^{\infty}\left[e^{-n x}+\frac{1}{n(n+1)} x^{n+1}\right] ,\text {收敛域 } (0,1]
+        S_{1}(x)=\sum_{n=1}^{\infty} e^{-n x}=\frac{e^{-x}}{1-e^{-x}}, x \in(0,1]                                                                                       \\
+        S_{2}(x)=\sum_{n=1}^{\infty} \frac{1}{n(n+1)} x^{n+1}=\sum_{n=1}^{\infty} \frac{x^{n+1}}{n}-\sum_{n=1}^{\infty} \frac{x^{n+1}}{n+1}=-x \ln (1-x)-[-\ln (1-x)-x] \\
+        =(1-x) \ln (1-x)+x, \quad x \in(0,1)                                                                                                                            \\
+        S_{2}(1)=\lim _{x \rightarrow 1^{-}} S_{2}(x)=1                                                                                                                 \\
+        S(x)=\left\{\begin{array}{l}
+            \frac{e^{-x}}{1-e^{-x}}+(1-x) \ln (1-x)+x, x \in(0,1) \\
+            \frac{e}{e-1}, x=1
+        \end{array}\right.
+    \end{array}$
+
+\vspace{1ex}
+{\heiti 38.}求极限 $\lim _{x \rightarrow 0}\left(\dfrac{1+\int_{0}^{x} e^{t^{2}} d t}{e^{x}-1}-\dfrac{1}{\sin x}\right) .$
+
+解: $\lim _{x \rightarrow 0}\left(\dfrac{1+\int_{0}^{x} e^{t^{2}} d t}{e^{x}-1}-\dfrac{1}{\sin x}\right)=\lim _{x \rightarrow 0} \dfrac{\sin x-1-\int_{0}^{x} e^{t^{2}} d t}{\left(e^{x}-1\right) \sin x}$
+
+又因为 $\int_{0}^{x} e^{t^{2}} d t=\int_{0}^{x}\left(1+t^{2}+o\left(t^{2}\right)\right) d t=x+\dfrac{1}{3} x^{3}+o\left(x^{3}\right)$, 故
+
+原式 $=\lim _{x \rightarrow 0} \dfrac{\left(x-\dfrac{1}{3 !} x^{3}+o\left(x^{3}\right)\right)\left(1+x+\dfrac{1}{3 !} x^{3}+o\left(x^{3}\right)\right)-x-\dfrac{1}{2} x^{2}+o\left(x^{2}\right)}{x^{2}}$
+
+$=\lim _{x \rightarrow 0} \dfrac{\dfrac{1}{2} x^{2}+o\left(x^{2}\right)}{x^{2}}=\dfrac{1}{2} .$
+
+\vspace{1ex}
+{\heiti 38.}已知 $\lim _{x \rightarrow 0}\left[\alpha \arctan \frac{1}{x}+(1+|x|)^{\frac{1}{x}}\right]$ 存在，求 $\alpha$ 的值.
+
+解: 要想极限存在，则左右极限相等;
+
+又由于 $\lim _{x \rightarrow 0^{+}}\left[\alpha \arctan \dfrac{1}{x}+\left(1+|x|\right)^{\dfrac{1}{x}}\right]=\dfrac{\pi}{2} \alpha+e $
+
+$\lim _{x \rightarrow 0^{-}}\left[\alpha \arctan \dfrac{1}{x}+(1+|x|)^{\dfrac{1}{x}}\right]=-\dfrac{\pi}{2} \alpha+\dfrac{1}{e} ;$
+
+从而 $\dfrac{\pi}{2} \alpha+e=-\dfrac{\pi}{2} \alpha+\dfrac{1}{e}$, 即 $\alpha=\dfrac{1}{\pi}\left(\dfrac{1}{e}-e\right) .$
+
+\vspace{1ex}
+{\heiti 39.}在区间 $(0,2)$ 上随机取一点，将该区间分成两段，较短的一段长度记为 $X$,较长的一段长度记为$Y$, 令 $Z=\frac{Y}{X}$
+
+(1)求 $X$ 的概率密度;
+
+(2)求 $Z$ 的概率密度.
+
+(3)求 $E\left(\frac{X}{Y}\right)$.
+
+解:
+
+(1) 由题知: $\quad x \sim f(x)=\left\{\begin{array}{c}
+        1,0<x<1 \\
+        0, \text { 其他 }
+    \end{array} ;\right.$
+
+(2)由 $y=2-x$, 即 $Z=\dfrac{2-X}{X}$, 先求 $Z$ 的分布函数:
+
+$F_{z}(z)=P\{Z \leq z\}=P\left\{\dfrac{2-X}{X} \leq z\right\}=P\left\{\dfrac{2}{X}-1 \leq z\right\}$
+
+当 $z<1$ 时， $F_{z}(z)=0$;
+
+当 $z \geq 1$ 时, $F_{z}(z)=P\left\{\frac{2}{X}-1 \leq z\right\}=1-P\left\{X \leq \frac{2}{z+1}\right\}=1-\int_{0}^{\frac{2}{z+1}} 1 d x=1-\frac{2}{z+1} ;$
+
+$f_{z}(z)=\left(F_{z}(z)\right)^{\prime}=\left\{\begin{array}{c}
+        \dfrac{2}{(z+1)^{2}}, z \geq 1 \\
+        0, \text { 其他 }
+    \end{array}\right.$
+
+(3) $E\left(\dfrac{X}{Y}\right)=E\left(\dfrac{X}{2-X}\right)=\int_{0}^{1} \dfrac{x}{2-x} \cdot 1 d x=-1+2 \ln 2$
+
+\vspace{1ex}
+{\heiti 40.}求函数 $f(x, y)=2 \ln |x|+\frac{(x-1)^{2}+y^{2}}{2 x^{2}}$ 的极值.
+
+解:
+
+(1) $\left\{\begin{array}{l}
+        f_{x}^{\prime}=\dfrac{2 x^{2}+x-1-y^{2}}{x^{3}}=0 \\
+        f_{y}^{\prime}=\dfrac{y}{x^{2}}=0
+    \end{array}\right.$ 即 $\left\{\begin{array}{l}
+        2 x^{2}+x-1-y^{2}=0 \\
+        y=0
+    \end{array}\right.$
+
+得驻点 $(-1,0),\left(\dfrac{1}{2}, 0\right)$
+
+(2)$\left\{\begin{array}{l}
+        f_{x x}^{\prime \prime}=\dfrac{(4 x+1) x-3\left(2 x^{2}+x-1-y^{2}\right)}{x^{4}} \\
+        f_{x y}^{\prime \prime}=\dfrac{-2 y}{x^{3}}                                      \\
+        f_{y y}^{\prime \prime}=\dfrac{1}{x^{2}}
+    \end{array}\right.$
+
+（3) 驻点 $(-1,0)$ 处, $\mathrm{A}=3, \mathrm{~B}=0, \mathrm{C}=1, \quad A C-B^{2}=3>0, \quad A>0$
+
+故 $f(x, y)$ 在 $(-1,0)$ 处取极小值 2 ;
+
+驻点 $\left(\dfrac{1}{2}, 0\right)$ 处, $\mathrm{A}=24, \mathrm{~B}=0, \mathrm{C}=4, \quad A C-B^{2}=3>0, \quad A>0$
+
+故 $f(x, y)$ 在 $\left(\dfrac{1}{2}, 0\right)$ 处取极小值 $\dfrac{1}{2}-2 \ln 2 .$
+
+\vspace{1ex}
+{\heiti 41.}求曲线 $y=\frac{x^{1+x}}{(1+x)^{x}}(x>0)$ 的斜渐近线方程.
+
+解: $\lim _{x \rightarrow+\infty} \frac{y}{x}=\lim _{x \rightarrow+\infty} \frac{x^{1+x}}{(1+x)^{x} x}$
+
+$=\lim _{x \rightarrow+\infty} \frac{x^{x}}{(1+x)}$
+
+$=\lim _{x \rightarrow+\infty} \frac{\mathrm{e}^{x \ln x}}{\mathrm{e}^{x \tan (1+x)}}$
+
+$=\lim _{x \rightarrow+\infty} \mathrm{e}^{x(\ln }$
+
+$=\lim _{x \rightarrow+\infty} \mathrm{e}^{\mathrm{x} \operatorname{lin} \frac{x+1-1}{1+x}}$
+
+$=\lim \mathrm{e}^{x \ln \left(1-\frac{1}{1+x}\right)}$
+
+$=\lim _{x \rightarrow+\infty} e^{x\left(\frac{-1}{1+x}\right)_{/}^{-1}}={ }^{-1}$
+
+$\lim _{x \rightarrow+\infty}\left(y-\mathrm{e}^{-1} x\right)$
+
+$=\lim _{x \rightarrow+\infty}\left(\frac{x^{1+x}}{(1+x)^{x}}-\mathrm{e}^{-1} x\right)$
+
+$=\lim _{x \rightarrow+\infty} x\left(\frac{x_{x}}{(1+x)^{x}}-\mathrm{e}-1\right)$
+
+$=\lim _{x \rightarrow+\infty} x \cdot\left(e^{\frac{x \ln x}{1+x}-e^{-1}}\right)$
+
+$=\lim _{x \rightarrow+\infty} e^{-1} x \cdot\left(x \ln \frac{x}{\underline{1+x}+1}\right) \mid$
+
+$=\lim _{t \rightarrow 0^{+}} e^{-1} \frac{\frac{1}{t} \cdot \ln \frac{\frac{1}{t}}{1+\frac{1}{t}}+1}{t}$
+
+$=\lim _{t \rightarrow 0^{+}} \mathrm{e}^{-1} \frac{\overline{t+1}}{t^{2}}$
+
+$=\lim _{t \rightarrow 0^{+}} \frac{-1}{t^{2}}=\frac{1}{2} \mathrm{e}^{-1}$
+
+$\therefore$ 曲线的斜渐近线方程为 $y=\mathrm{e}^{-1} x_{\pm}{ }^{1} \mathrm{e}^{-1}$
+
+\vspace{1ex}
+{\heiti 42.}已知函数 $f(x)$ 连续且$\lim _{x \rightarrow 0} \dfrac{f(x)}{x}=1, g(x)=\int_{0}^{1} f(x t) d t$, 求g '( $\left.x\right)$ 并证明 $g{ }^{\prime}(x)$ 在 $x=0$ 处连续.
+
+解: 因为$\operatorname{lim } _{x \rightarrow 0 x}=1 \quad \therefore f(0)=\lim _{x \rightarrow 0} f(x)=0$
+所以 $g(0)=\int_{0}^{1} f(0) d t=0$
+
+因为 $g(x)=\int_{0}^{1} f(x t) d t \underline{x t=u} \dfrac{1}{x^{0}} \int_{0}^{x} f(u) d u$
+
+当 $x \neq 0$ 时, $g^{\prime}(x)=\dfrac{x f(x)-\int_{0}^{x} f(u) d u}{x^{2}}$
+
+当 $x=0$ 时,$\quad g^{\prime}(0)=\lim _{x \rightarrow 0} \dfrac{g(x)-g(0)}{x-0}=\lim _{x \rightarrow 0} \dfrac{\int_{0}^{x f(u) d u}}{x^{2}}=\dfrac{1}{2 x \rightarrow 0} \lim \dfrac{f(x)}{x}=\dfrac{1}{2}$
+
+$g^{\prime}(x)=\left\{\begin{array}{cc}\dfrac{f f(u) d u}{x^{2}}, & x \neq 0 \\ \dfrac{1}{2}, & x=0\end{array}\right.$
+
+又因为 $\lim _{x \rightarrow 0} g^{\prime}(x)=\lim _{x \rightarrow 0} \dfrac{x f(x)}{-x^{2}}-{ }_{0}^{x}(u) d u$
+
+$=\lim _{x \rightarrow 0}\left[\dfrac{f(x)}{x}-\left.\dfrac{\int_{0}^{x} f(u) d u}{x \rightarrow 0} \dfrac{x^{x^{2}}}{x^{2}}\right|_{\mid\rfloor} ^{\mid}=1-\dfrac{1}{2}=\dfrac{1}{2}\right.$
+
+$\therefore g^{\prime}(x)$ 在 $x=0$ 处连续
+
+\vspace{1ex}
+{\heiti 43.}求解行列式$\left|\begin{array}{cccc}a & 0 & -1 & 1 \\ 0 & a & 1 & -1 \\ -1 & 1 & a & 0 \\ 1 & -1 & 0 & a\end{array}\right|=$
+
+解:
+$\left|\begin{array}{cccc}a & 0 & -1 & 1 \\ 0 & a & 1 & -1 \\ -1 & 1 & a & 0 \\ 1 & -1 & 0 & a\end{array}\right|=\left|\begin{array}{cccc}a & 0 & -1 & 1 \\ 0 & a & 1 & -1 \\ -1 & 1 & a & 0 \\ 0 & 0 & a & a\end{array}\right|$
+
+$=\left|\begin{array}{cccc}0 & a & -1+a^{2} & 1 \\ 0 & a & 1 & -1 \\ -1 & 1 & a & 0 \\ 0 & 0 & a & a\end{array}\right|=-\left|\begin{array}{ccc}a & -1+a^{2} & 1 \\ a & 1 & -1 \\ 0 & a & a\end{array}\right|$
+
+$=-\left|\begin{array}{ccc}a & a^{2}-2 & 1 \\ a & 2 & -1 \\ 0 & 0 & a\end{array}\right|=a^{4}-4 a^{2}$
+
+\vspace{1ex}
+{\heiti 44.}已知 $\mathrm{f}(\mathrm{x}), \mathrm{g}(\mathrm{x}) \in \mathrm{P}[\mathrm{x}] .$ 证明: $\mathrm{f}(\mathrm{x}), \mathrm{g}(\mathrm{x}))=1$ 的充分必要条件是对 $\forall \mathrm{r}(\mathrm{x}), \mathrm{s}(\mathrm{x}), \exists \mathrm{p}(\mathrm{x}), \mathrm{q}(\mathrm{x})$
+
+使得 $\mathrm{p}(\mathrm{x}) \mathrm{f}(\mathrm{x})+\mathrm{r}(\mathrm{x})=\mathrm{q}(\mathrm{x}) \mathrm{g}(\mathrm{x})+\mathrm{s}(\mathrm{x})$
+
+(1) 充分性:
+$$
+    \begin{array}{r}
+        (\mathrm{f}, \mathrm{g})=1 \Rightarrow \exists \mathrm{u}, \mathrm{v}, \mathrm{s}, \mathrm{t} \cdot \mathrm{uf}+\mathrm{vg}=1 \\
+        \Rightarrow \mathrm{u}(\mathrm{s}-\mathrm{r}) \mathrm{f}+\mathrm{v}(\mathrm{s}-\mathrm{r}) \mathrm{g}=\mathrm{s}-\mathrm{r}
+    \end{array}
+$$
+
+(2) 必要性 取 $\mathrm{r}=0, \mathrm{~s}=1$, 则
+$$
+    \mathrm{pf}-\mathrm{qg}=1 \Rightarrow(\mathrm{f}, \mathrm{g})=1
+$$
+
+\vspace{1ex}
+{\heiti 45.}计算 n+1 阶行列式
+$$
+    D=\left|\begin{array}{cccc}
+        a^{n}   & (a-1)^{n}(a-2)^{n}     & \cdots & (a-n)^{n}   \\
+        a^{n-1} & (a-1)^{n-1}(a-2)^{n-1} & \cdots & (a-n)^{n-1} \\
+        a^{n-2} & (a-1)^{n-2}(a-2)^{n-2} & \cdots & (a-n)^{n-2} \\
+        \vdots  & \vdots                 & \vdots               \\
+                & 1                      & 1      & 1
+    \end{array}\right|
+$$
+
+解：将第 $\mathrm{n}+1$ 行与上面的两两互换，换到第一行，经过 $\mathrm{n}$ 次互换，再将第 $\mathrm{n}$ 行与上面两两 互换，换到第二行
+
+得到
+$$
+    \mathrm{D}=(-1)^{n+(n-1)+\cdots+1}\left|\begin{array}{cccc}
+        1       &                        & 1      & 1           \\
+        a       & a-1                    & \ldots & a-n         \\
+        a^{n-1} & (a-1)^{n-1}(a-2)^{n-1} & \ldots & (a-n)^{n-1} \\
+        a^{n}   & (a-1)^{n}(a-2)^{n}     & \cdots & (a-n)^{n}
+    \end{array}\right|
+$$
+
+对列也进行类似互换得到
+$\mathrm{D}=(-1)^{\dfrac{n(n+1)}{2}}(-1)^{\dfrac{n(n+1)}{2}}\left|\begin{array}{cccc}1 & & 1 & 1 \\ a-n & a-(n-1) & \ldots & a \\ (a-n)^{n} & {[a-(n-1)]^{n}} & \ddots & \vdots \\ & \cdots & a^{n}\end{array}\right|=n !(n-1) ! \ldots .2 ! $（范德蒙
+行列式）
+
+\vspace{1ex}
+{\heiti 46.}已知A $=\left(\begin{array}{lll}1 & 0 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0\end{array}\right)$
+
+(1).证明: $A^{n}=A^{n-2}+A^{2}-E \quad(\mathrm{n} \geq 3)$
+
+(2).求 $A^{2020}$
+
+解:
+
+(1) 证明: 对 $\mathrm{n}$ 做数学归纳法， $\mathrm{n}=3$ 时，由 $\mathrm{A}$ 的特征多项式
+$$\mathrm{f}(\lambda)=|\lambda \mathrm{E}-\mathrm{A}|=\lambda^{3}-\lambda^{2}-\lambda+1$$
+
+及 Hamilton-Cayley 定理知 $\mathrm{f}(\mathrm{A})=0 \Rightarrow A^{3}=A+A^{2}-E$
+
+若结论对 $\mathrm{n}$ 成立，则
+$$
+    \begin{array}{c}
+        A^{n+1}=A^{n} A                                    \\
+        =\left(A^{n-2}+A^{2}-E\right) A(\text {归纳假设 }) \\
+        =A^{n-1}+A^{3}-A                                   \\
+        =A^{n-1}+\left(A^{2}+A-E\right)-A                  \\
+        =A^{n-1}+A^{2}-E
+    \end{array}
+$$
+
+(2) 由（1）的结论
+$$
+    \begin{array}{rl}
+                    & A^{2 k}-A^{2(k-1)}=A^{2}-E                                \\
+        \Rightarrow & A^{2020}-A^{2}=1009\left(A^{2}-E\right)                   \\
+        A^{2020}=1  & 010 A^{2}-1009 E=\left(\begin{array}{ccc}
+                1    & 0 & 0 \\
+                1010 & 1 & 0 \\
+                1010 & 0 & 0
+            \end{array}\right)
+    \end{array}
+$$
+\vspace{1ex}
+{\heiti 47.}巳知
+$\alpha_{1}=(1,2,0) \quad \alpha_{2}=(1, a+2,-3 a) \alpha_{3}=(1,2,0) \quad \beta=(1,3,-3)$
+
+求 a,b的值使得
+
+(1). $\beta$ 不可被 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出
+
+(2). $\beta$ 可被 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 唯一线性表出，并求表达方式
+
+(3). $\beta$ 可被 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出且不唯一，并求表达式
+
+(4). $\beta $可由 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出 
+$$
+    \begin{aligned}
+        \Leftrightarrow &\exists x_{i} . \text { s.t. } \beta=\sum x_{i} a_{i} \\
+        \Leftrightarrow &\exists x_{i} . \text { s.t. } \beta^{T}=\sum x_{i} \alpha_{i}^{T} \\
+        \Leftrightarrow &\mathrm{Ax}=\mathrm{b} \text { 有解，其中 } \mathrm{A}=\left(\alpha_{1}^{T}, \alpha_{2}^{T}, \alpha_{3}^{T}\right), \mathrm{b}=\beta^{T} \\
+        \Leftrightarrow &\operatorname{rank}(\mathrm{A})=\operatorname{rank}(\mathrm{A}, \mathrm{b})
+    \end{aligned}
+$$
+
+
+对(A,b)实施行初等变换
+$$
+    (A, b)=\left(\begin{array}{cccc}
+            1 & 1    & -1    & 1  \\
+            2 & a+2  & -b-2  & 3  \\
+            0 & -3 a & a+2 b & -3
+        \end{array}\right) \rightarrow\left(\begin{array}{cccc}
+            1 & 1 & -1  & 1 \\
+            0 & a & -b  & 1 \\
+            0 & 0 & a-b & 0
+        \end{array}\right)
+$$
+
+(1) 若 $\mathrm{a}=\mathrm{b}=0$, 则 $r(A)=1 \neq 2=r(A, b)$
+
+此时，线性线性方程组无解， $\beta$ 不可由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表出
+
+(2) 若 $\mathrm{a}=\mathrm{b} \neq 0$, 则$r(A)=2=r(A, b)$
+
+此时线性方程组有无穷多解， $\beta$ 可由 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出，由
+$$(\mathrm{A}, \mathrm{b}) \rightarrow\left(\begin{array}{cccc}1 & 1 & -1 & 1 \\ 0 & 1 & -1 & 1 / a \\ 0 & 0 & 0 & 0\end{array}\right) \rightarrow\left(\begin{array}{cccc}1 & 0 & 0 & 1-1 / a \\ 0 & 1 & -1 & 1 / a \\ 0 & 0 & 0 & 0\end{array}\right)$$
+
+知
+$$\beta=\left(1-\frac{1}{\mathrm{a}}\right) x_{1}+\frac{1}{a} x_{2}+k x_{2}+k x_{3}=\left(1-\frac{1}{a}\right) x_{1}+\left(k+\frac{1}{a}\right) x_{2}+k x_{3} .$$
+
+(3).若 $\mathrm{a} \neq \mathrm{b}, \mathrm{a}=0$, 则 $\mathrm{b} \neq 0$,
+$$
+    (A, b)=\left(\begin{array}{cccc}
+            1 & 1 & -1  & 1 \\
+            0 & 0 & 0   & 1 \\
+            0 & 0 & a-b & 0
+        \end{array}\right)
+$$
+
+由第二行知线性方程组无解， $\beta$ 不可由 $\alpha_{1}, \alpha_{2}, \alpha_{3}$ 线性表出.
+(4).若 $\mathrm{a} \neq \mathrm{b}, \mathrm{a} \neq 0$, 则 $|\mathrm{A}| \neq 0$, 而 $\beta$ 可由 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 唯一地线性表出.此时
+$$
+    \beta=\frac{\mathrm{a}-1}{\mathrm{a}} x_{1}+\frac{1}{a} x_{2}
+$$
+
+\vspace{1ex}
+{\heiti 48.}已知
+$$
+\mathrm{f}\left(x_{1} x_{2} \ldots x_{n}\right)=\sum_{i=1}^{n} \sum_{j=1}^{n} a_{i j} x_{i} x_{j}
+$$
+正负惯性指数分别为 p, q，且
+$$
+\alpha_{1}, \alpha_{2}, \ldots, \alpha_{p}, \beta_{1}, \beta_{2}, \ldots, \beta_{p}
+$$
+为任意 $\mathrm{p}+\mathrm{q}$ 个正数。证明:存在非退化线性替换 $\mathrm{x}=$ Cy使得 $\mathrm{f}(\mathrm{x})=\alpha_{1} y_{1}^{2}+\cdots+\alpha_{p} y_{p}^{2}-\beta_{1} y_{p+1}^{2}-\cdots-\beta_{q} y_{p+q}^{2}$
+解: $\mathrm{f}$ 的正负惯性指数分别为p, q
+$\Rightarrow$ 存在可逆线性替换 $\mathrm{x}=\mathrm{Pz}$ 使得 $\mathrm{f}(\mathrm{x})=Z_{1}^{2}+\cdots+Z_{P}^{2}-Z_{P+1}^{2}+\cdots-Z_{p+q}^{2}$
+$\Rightarrow$ 存在可逆线性替换 $\mathrm{x}=\operatorname{Pdiag}\left(\sqrt{\alpha_{1}}, \ldots, \sqrt{\alpha_{p}}, \sqrt{\beta_{1}}, \ldots, \sqrt{\beta_{q}}\right)$, 使得
+$$
+\mathrm{f}(\mathrm{x})=Z_{1}^{2}+\cdots+Z_{P}^{2}-Z_{P+1}^{2}+\cdots-Z_{p+q}^{2}=\alpha_{1} y_{1}^{2}+\cdots+\alpha_{p} y_{p}^{2}-\beta_{1} y_{p+1}^{2}-\cdots-\beta_{q} y_{p+q}^{2}
+$$
+
+\vspace{1ex}
+{\heiti 49.}
+
+\vspace{1ex}
+{\heiti 50.}
+
+
 \end{document}

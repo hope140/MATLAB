@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  17 MAY 2021 13:16
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.8.10)  17 MAY 2021 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -589,19 +589,39 @@ LaTeX Warning: The counter will not be printed.
 LaTeX Warning: The counter will not be printed.
              The label is: \qquad 证明： on input line 385.
 
-[6] [7] (./2018641002.aux)
+[6]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 解： on input line 425.
+
+[7]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 证明： on input line 500.
+
+[8] [9]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: \qquad 证明： on input line 573.
+
+[10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24]
+Overfull \hbox (8.3082pt too wide) in paragraph at lines 1486--1489
+[]\TU/SimSun(0)/m/n/10.53937 对 列 也 进 行 类 似 互 换 得 到 $[] \OT1/cmr/m/n/10.53937 = (\OMS/cmsy/m/n/10.53937 ^^@\OT1/cmr/m/n/10.53937 1)[](\OMS/cmsy/m/n/10.53937 ^^@\OT1/cmr/m/n/10.53937 1)[] [] = \OML/cmm/m/it/10.53937 n\OT1/cmr/m/n/10.53937 !(\OML/cmm/m/it/10.53937 n \OMS/cmsy/m/n/10.53937 ^^@ \OT1/cmr/m/n/10.53937 1)! [] \OML/cmm/m/it/10.53937 :\OT1/cmr/m/n/10.53937 2!$
+ []
+
+[25] [26] [27] (./2018641002.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.41063pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 8550 strings out of 481358
- 216671 string characters out of 5927881
- 507160 words of memory out of 5000000
- 25801 multiletter control sequences out of 15000+600000
+ 8595 strings out of 481358
+ 219479 string characters out of 5927881
+ 509160 words of memory out of 5000000
+ 25846 multiletter control sequences out of 15000+600000
  538719 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 56i,11n,68p,400b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,68p,590b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2018641002.pdf (7 pages).
+Output written on 2018641002.pdf (27 pages).
