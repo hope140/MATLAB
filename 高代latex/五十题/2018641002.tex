@@ -1536,13 +1536,13 @@ $\alpha_{1}=(1,2,0) \quad \alpha_{2}=(1, a+2,-3 a) \alpha_{3}=(1,2,0) \quad \bet
 
 (3). $\beta$ 可被 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出且不唯一，并求表达式
 
-(4). $\beta $可由 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出 
+(4). $\beta $可由 $\alpha_{1}, \alpha_{2}, \quad \alpha_{3}$ 线性表出
 $$
     \begin{aligned}
-        \Leftrightarrow &\exists x_{i} . \text { s.t. } \beta=\sum x_{i} a_{i} \\
-        \Leftrightarrow &\exists x_{i} . \text { s.t. } \beta^{T}=\sum x_{i} \alpha_{i}^{T} \\
-        \Leftrightarrow &\mathrm{Ax}=\mathrm{b} \text { 有解，其中 } \mathrm{A}=\left(\alpha_{1}^{T}, \alpha_{2}^{T}, \alpha_{3}^{T}\right), \mathrm{b}=\beta^{T} \\
-        \Leftrightarrow &\operatorname{rank}(\mathrm{A})=\operatorname{rank}(\mathrm{A}, \mathrm{b})
+        \Leftrightarrow & \exists x_{i} . \text { s.t. } \beta=\sum x_{i} a_{i}                                                                                    \\
+        \Leftrightarrow & \exists x_{i} . \text { s.t. } \beta^{T}=\sum x_{i} \alpha_{i}^{T}                                                                       \\
+        \Leftrightarrow & \mathrm{Ax}=\mathrm{b} \text { 有解，其中 } \mathrm{A}=\left(\alpha_{1}^{T}, \alpha_{2}^{T}, \alpha_{3}^{T}\right), \mathrm{b}=\beta^{T} \\
+        \Leftrightarrow & \operatorname{rank}(\mathrm{A})=\operatorname{rank}(\mathrm{A}, \mathrm{b})
     \end{aligned}
 $$
 
@@ -1590,25 +1590,120 @@ $$
 \vspace{1ex}
 {\heiti 48.}已知
 $$
-\mathrm{f}\left(x_{1} x_{2} \ldots x_{n}\right)=\sum_{i=1}^{n} \sum_{j=1}^{n} a_{i j} x_{i} x_{j}
+    \mathrm{f}\left(x_{1} x_{2} \ldots x_{n}\right)=\sum_{i=1}^{n} \sum_{j=1}^{n} a_{i j} x_{i} x_{j}
 $$
+
 正负惯性指数分别为 p, q，且
 $$
-\alpha_{1}, \alpha_{2}, \ldots, \alpha_{p}, \beta_{1}, \beta_{2}, \ldots, \beta_{p}
+    \alpha_{1}, \alpha_{2}, \ldots, \alpha_{p}, \beta_{1}, \beta_{2}, \ldots, \beta_{p}
 $$
+
 为任意 $\mathrm{p}+\mathrm{q}$ 个正数。证明:存在非退化线性替换 $\mathrm{x}=$ Cy使得 $\mathrm{f}(\mathrm{x})=\alpha_{1} y_{1}^{2}+\cdots+\alpha_{p} y_{p}^{2}-\beta_{1} y_{p+1}^{2}-\cdots-\beta_{q} y_{p+q}^{2}$
+
 解: $\mathrm{f}$ 的正负惯性指数分别为p, q
-$\Rightarrow$ 存在可逆线性替换 $\mathrm{x}=\mathrm{Pz}$ 使得 $\mathrm{f}(\mathrm{x})=Z_{1}^{2}+\cdots+Z_{P}^{2}-Z_{P+1}^{2}+\cdots-Z_{p+q}^{2}$
+
+$\Rightarrow$ 存在可逆线性替换 $\mathrm{x}=\mathrm{Pz}$ 使得
+$$\mathrm{f}(\mathrm{x})=Z_{1}^{2}+\cdots+Z_{P}^{2}-Z_{P+1}^{2}+\cdots-Z_{p+q}^{2}$$
+
 $\Rightarrow$ 存在可逆线性替换 $\mathrm{x}=\operatorname{Pdiag}\left(\sqrt{\alpha_{1}}, \ldots, \sqrt{\alpha_{p}}, \sqrt{\beta_{1}}, \ldots, \sqrt{\beta_{q}}\right)$, 使得
 $$
-\mathrm{f}(\mathrm{x})=Z_{1}^{2}+\cdots+Z_{P}^{2}-Z_{P+1}^{2}+\cdots-Z_{p+q}^{2}=\alpha_{1} y_{1}^{2}+\cdots+\alpha_{p} y_{p}^{2}-\beta_{1} y_{p+1}^{2}-\cdots-\beta_{q} y_{p+q}^{2}
+    \mathrm{f}(\mathrm{x})=Z_{1}^{2}+\cdots+Z_{P}^{2}-Z_{P+1}^{2}+\cdots-Z_{p+q}^{2}=\alpha_{1} y_{1}^{2}+\cdots+\alpha_{p} y_{p}^{2}-\beta_{1} y_{p+1}^{2}-\cdots-\beta_{q} y_{p+q}^{2}
 $$
 
 \vspace{1ex}
-{\heiti 49.}
+{\heiti 49.}设 $\mathrm{V}=\mathbb{P}[x]_{n}$ 是数域$\mathbb{P}$上的 $\mathrm{n}$ 维线性空间，且
+$$(\mathrm{f}(\mathrm{x}))=x f^{\prime}(x)-f(x), \forall f(x) \in V$$
+
+(1) 证明: $\mathcal{A}$ 为线性变换
+
+(2) 求 $\mathcal{A}^{-1}(0)$与 $(\mathrm{~V})$
+
+(3) 证明: $\mathrm{V}=\mathcal{A}^{-1}(0) \oplus \mathcal{A}(\mathrm{V})$
+
+证:
+
+(1) $\mathcal{A}(\mathrm{kf}(\mathrm{x})+\lg (\mathrm{x}))=\mathrm{x}[\mathrm{kf}(\mathrm{x})+\lg (\mathrm{x})]^{\prime}-[\mathrm{kf}(\mathrm{x})+\lg (\mathrm{x})]$
+$\mathrm{k}\left[\mathrm{xf}(\mathrm{x})^{\prime}-\mathrm{f}(\mathrm{x})\right]+\mathrm{l}\left[\mathrm{xg}(\mathrm{x})^{\prime}-\mathrm{g}(\mathrm{x})\right]$
+$=\mathrm{k} \operatorname{Af}(\mathrm{x})+\mathrm{l}_{\mathcal{C}} \mathrm{Ag}(\mathrm{x})$
+
+(2) 由
+$\mathrm{f} \in \mathcal{A}^{-1}(0) \Leftrightarrow \mathrm{x} f^{\prime}(x)=f(x) \Leftrightarrow f \equiv$ 或 $\frac{d f}{f}=\frac{1}{x} \Leftrightarrow f(x) \equiv c x$ 知$\mathcal{A}^{-1}(0)=L(x)$
+
+又由
+$$
+    \begin{aligned}
+        \mathcal{A} \mathrm{x}^{k}= & x \cdot k \mathrm{x}^{k-1}-\mathrm{x}^{k}   \\
+        =                           & (k-1) \mathrm{x}^{k} \quad(0 \leq k \leq 1) \\
+        =                           & \left\{\begin{array}{l}
+            (k-1) \mathrm{x}^{k}, k \neq 1 \\
+            0, \quad k=1
+        \end{array}\right.
+    \end{aligned}
+$$
+
+知
+$$
+    \begin{aligned}
+        \mathcal{A}(\mathrm{V})= & \mathrm{L}\left(\mathcal{A}(1), \mathcal{A}(\mathrm{x}), \ldots, \mathcal{A}\left(\mathrm{x}^{n}\right)\right) \\
+        =                        & \mathrm{L}\left(-1,0, \mathrm{x}^{2}, \ldots,(\mathrm{n}-1) \mathrm{x}^{n}\right)                              \\
+        =                        & \mathrm{L}\left(1, \mathrm{x}^{2}, \ldots \mathrm{x}^{n}\right)
+    \end{aligned}
+$$                                                  
+
+(3)
+$$
+    \begin{aligned}
+        \mathrm{V}= & \mathbb{P}[\mathrm{x}]_{n}                                         \\
+        =           & L\left(1, x, \mathrm{x}^{2}, \ldots, \mathrm{x}^{n}\right)         \\
+        =           & L(x) \oplus L\left(1, \mathrm{x}^{2}, \ldots \mathrm{x}^{n}\right) \\
+        =           & \mathcal{A}^{-1}(0) \oplus \mathcal{A}(\mathrm{V})
+    \end{aligned}
+$$
 
 \vspace{1ex}
-{\heiti 50.}
+{\heiti 50.}己知 $\mathrm{A}, \mathrm{B}$ 为数域止上的 $\mathrm{n}$ 阶方阵，A有 $\mathrm{n}$ 个互异的特征值.证明: $\mathrm{A}$ 的特征向量是 B 的特征 向量充分必要条件是 AB=BA.
 
+解:
+设 A 的 $\mathrm{n}$ 个互异特征值为 $\lambda_{1}, \ldots \ldots \ldots, \lambda_{n}$,对应特征向量为 $\alpha_{1}, \ldots \ldots \ldots, \alpha_{n}$ 
+
+则属于不同特征值得特征向量线性无关
+
+知 $\alpha_{1}, \ldots \ldots \ldots, \alpha_{n}$ 线性无关，是 $\mathbb{P}^{n}$ 的一组基，令$\mathrm{P}=\left(\alpha_{1}, \ldots, \alpha_{n}\right)$则 
+$$\mathrm{AP}=\operatorname{Pdiag}\left(\lambda_{1}, \ldots, \lambda_{n}\right) \Rightarrow p^{-1} A P=\operatorname{diag}\left(\lambda_{1}, \ldots, \lambda_{n}\right)$$
+
+再令 $\mathrm{V}_{i}=\left\{\alpha \in \mathbb{P}^{n} ; A \alpha=\alpha\right\}$, 则
+$$\operatorname{dim} V_{i}=1 \Rightarrow=L\left(\alpha_{i}\right)$$
+
+可以用反证法证得: $\exists i_{0}$, s.t. $\operatorname{dim} V_{i_{0}} \geq 2$
+
+$\Rightarrow V_{i_{0}}$ 有与 $\alpha_{i}$ 线性无关的向量 $\beta$
+
+$\Rightarrow \alpha_{1}, \ldots \ldots, \alpha_{n}, \beta$ 线性无关(理由: 属于不同特征值的特征向量无关)
+
+$\Rightarrow n=\operatorname{dim} \mathbb{P}^{n} \geq \operatorname{dim} \|_{1}L\left(\alpha_{1}, \ldots, \alpha_{n}, \beta\right)=n+1 \Rightarrow$ 矛盾，故有结(1)
+
+$\Rightarrow$ 设 $\mathrm{A}$ 的特征向量是 B 的特征向量则$\exists \mu_{i} \in \mathbb{P}^{n}, s.t .$
+
+$\Rightarrow p^{-1} B P$
+
+$=\operatorname{diag}\left(\mu_{1} \ldots \mu_{n}\right)$
+
+$\Rightarrow p^{-1} A B P=P^{-1} A P \cdot P^{-1} B P$
+
+$=\operatorname{diag}\left(\lambda_{1} \ldots \lambda_{n}\right) \cdot \operatorname{diag}\left(\mu_{1} \ldots \mu_{n}\right)$
+
+$=\cdot P^{-1} B P \cdot P^{-1} A P$
+
+$\Rightarrow A B=B A$
+
+$(2) \Leftarrow$ 设 $\mathrm{AB}=\mathrm{BA}$, 则
+
+$\mathrm{A}=\mathrm{BA} \alpha_{i}=B \alpha_{i}=\lambda_{i} B \alpha_{i}$
+
+$\Rightarrow \mathrm{B} \alpha_{i}$ 是 $A$ 的属于特征值$\lambda_{i}$ 的特征向量
+
+$\Rightarrow \exists \mathrm{B} \alpha_{i} \in V_{i}$
+
+$\Rightarrow \exists \mu_{i} \in \mathbb{P}$, s.t. $\mathrm{B} \alpha_{i}=\mu_{i} \alpha_{i}\left(\operatorname{dimV}_{i}=1 \Rightarrow V_{i}=L\left(\alpha_{i}\right)\right)$
 
 \end{document}
